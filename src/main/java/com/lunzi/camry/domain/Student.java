@@ -1,12 +1,16 @@
 package com.lunzi.camry.domain;
 
 import lombok.Data;
+import org.springframework.stereotype.Component;
+
+import java.io.Serializable;
 
 /**
  * Created by lunzi on 2018/6/5 下午10:33
  */
 @Data
-public class Student {
+@Component
+public class Student implements Serializable {
     private String name;
 
     //---------------构造方法-------------------
