@@ -1,15 +1,18 @@
 package com.lunzi.camry;
 
 import com.lunzi.camry.domain.Dic;
+import com.lunzi.camry.domain.Student;
 import com.lunzi.camry.listen.MyEvent;
 import com.lunzi.camry.listen.MyPublisher;
 import com.lunzi.camry.spring.SpringContextUtil;
 import com.lunzi.camry.spring.TestMethod;
+import org.apache.commons.configuration.beanutils.DefaultBeanFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -33,7 +36,7 @@ public class TestSpring {
         //获取beanFactory
         DefaultListableBeanFactory defaultListableBeanFactory= (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
         //bean注入
-            BeanDefinitionBuilder builder=BeanDefinitionBuilder.genericBeanDefinition(clazz);
+        BeanDefinitionBuilder builder=BeanDefinitionBuilder.genericBeanDefinition(clazz);
         defaultListableBeanFactory.registerBeanDefinition(clazz.getCanonicalName(),builder.getBeanDefinition());
         Object dic=applicationContext.getBean(clazz);
 
@@ -46,6 +49,11 @@ public class TestSpring {
     }
     @Test
     public void testAop(){
-        testMethod.print();
+        Class clazz=Student.class;
+        ApplicationContext applicationContext=SpringContextUtil.getApplicationContext();
+        DefaultListableBeanFactory defaultListableBeanFactory= (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
+        BeanDefinitionBuilder builder=BeanDefinitionBuilder.genericBeanDefinition(clazz);
+        defaultListableBeanFactory.registerBeanDefinition("student",builder.getBeanDefinition());
+
     }
 }

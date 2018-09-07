@@ -1,6 +1,7 @@
 package com.lunzi.camry;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
+import com.google.gson.Gson;
 import com.lunzi.camry.ao.SeqAO;
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.User;
@@ -9,13 +10,16 @@ import com.lunzi.camry.service.DicService;
 import com.lunzi.camry.service.UserService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Wrapper;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.concurrent.CountDownLatch;
 
 @RunWith(SpringRunner.class)
@@ -27,6 +31,8 @@ public class CamryApplicationTests {
     DicService dicService;
     private int count = 2;
     private CountDownLatch latch = new CountDownLatch(count);
+
+    private Gson gson=new Gson();
 
     @Transactional
     @Test
@@ -60,11 +66,24 @@ public class CamryApplicationTests {
     }
     @Test
     public void insert(){
-            Dic dic=new Dic();
-            dic.setKeyCode("c");
-            dic.setValue(123L);
-            dicService.insert(dic);
-           // throw new RuntimeException();
+        Dic dic=seqAO.getNewest();
+        System.out.println(gson.toJson(dic));
+    }
+    @Test
+    public void in(){
+        Dic dic=new Dic();
+        //dicService.insert();
+    }
+    @Test
+    public void  test4(){
+        int i=4;
+        if(i==1){
+            System.out.println("1");
+        }else if(i==2){
+            System.out.println("2");
+        }else if(i==4){
+            System.out.println("4");
+        }
 
     }
 
