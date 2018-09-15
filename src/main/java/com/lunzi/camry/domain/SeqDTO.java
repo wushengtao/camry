@@ -13,7 +13,7 @@ public class SeqDTO {
 
     public Long getNextNum(){
         if(value<maxValue){
-            return value++;
+            return ++value;
         }else{
             return null;
         }

@@ -27,7 +27,7 @@ public class SeqAOImpl implements SeqAO {
     @Autowired
     DicService dicService;
     private static Map<String,SeqDTO> map=new ConcurrentHashMap<>();
-    private static Long step=10L;//步长
+    private static Long step=3L;//步长
     @Override
     public Long genCurrentTimp() {
         synchronized (this){
@@ -58,6 +58,17 @@ public class SeqAOImpl implements SeqAO {
         //如果为空的话 需要重新去生成新的记录，不为空就直接取
         if(seqDTO==null){
             //获取当前数据库里最大的值
+            Dic dic=getNewDic();
+            if(dic==null){
+                //说明数据库还没有数据，就插入新的数据
+                SeqDTO seq=insertOne(1L);
+                map.put("test",seq);
+                return seq.getValue();
+            }else {
+                SeqDTO seqDTO1= insertOne(dic.getValue()+step);
+                map.put("test",seqDTO1);
+                return seqDTO1.getValue();
+            }
 
         }
         else {
@@ -65,12 +76,44 @@ public class SeqAOImpl implements SeqAO {
             Long seqValue=seqDTO.getNextNum();
             if(seqValue==null){
                 //本地的缓存值已经用光了，需要重新生成新的
+                Dic dic=getNewDic();
+                SeqDTO seqDTO1=new SeqDTO();
+                seqDTO1.setKeyCode("test");
+                seqDTO1.setValue(dic.getValue()+step);
+                seqDTO1.setMaxValue(dic.getValue()+step+step-1);
+                //插入数据库新的
+                insertOne(dic.getValue()+step);
+                map.put("test",seqDTO1);
+                return seqDTO1.getValue();
             }
             else{
                 return seqValue;
             }
         }
-        return null;
+    }
+
+    @Override
+    public Dic getNewDic() {
+        EntityWrapper<Dic> entityWrapper=new EntityWrapper<>();
+        entityWrapper.orderBy("id",false);
+        List<Dic> dicList=dicService.selectList(entityWrapper);
+        if(!CollectionUtils.isEmpty(dicList)){
+            return dicList.get(0);
+        }else {
+            return null;
+        }
+    }
+    @Override
+    public SeqDTO insertOne(Long value) {
+        Dic dic=new Dic();
+        dic.setKeyCode("test");
+        dic.setValue(value);
+        dicService.insert(dic);
+        SeqDTO seqDTO=new SeqDTO();
+        seqDTO.setKeyCode("test");
+        seqDTO.setValue(value);
+        seqDTO.setMaxValue(step-1+value);
+        return seqDTO;
     }
 
 }

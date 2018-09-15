@@ -1,5 +1,6 @@
 package com.lunzi.camry.reflect;
 
+import com.google.common.collect.Lists;
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.Student;
 import jdk.internal.dynalink.linker.MethodHandleTransformer;
@@ -10,6 +11,7 @@ import java.lang.reflect.Method;
 import java.util.Arrays;
 import java.util.ConcurrentModificationException;
 import java.util.HashSet;
+import java.util.List;
 import java.util.stream.Collectors;
 
 /**
@@ -55,5 +57,11 @@ public class Reflect {
     public static void main(String[] args) throws Exception {
        Reflect.getobjectConstruction();
         //Reflect.methodInvoke();
+        Student student=new Student();
+        student.setName("123");
+        Student student1=new Student();
+        student1.setName("123");
+        List<Student> list= Lists.newArrayList(student,student1);
+        System.out.println(list.stream().map(Student::getName).collect(Collectors.toList()));
     }
 }

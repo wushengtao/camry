@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lunzi.camry.mapper.MethodLockDao">
+
+    <select id="selectLockForUpdate" parameterType="java.lang.String" resultType="com.lunzi.camry.domain.MethodLock">
+        select * from method_lock where lock_name =#{lockName} for update
+    </select>
+</mapper>

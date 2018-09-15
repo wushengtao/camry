@@ -25,6 +25,7 @@ import java.util.concurrent.CountDownLatch;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class CamryApplicationTests {
+
     @Autowired
     SeqAO seqAO;
     @Autowired
@@ -76,15 +77,9 @@ public class CamryApplicationTests {
     }
     @Test
     public void  test4(){
-        int i=4;
-        if(i==1){
-            System.out.println("1");
-        }else if(i==2){
-            System.out.println("2");
-        }else if(i==4){
-            System.out.println("4");
+        for (int i=0;i<10;i++){
+            System.out.println(seqAO.getNextNumber());
         }
-
     }
 
 }

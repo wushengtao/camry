@@ -7,15 +7,18 @@ import com.lunzi.camry.listen.MyPublisher;
 import com.lunzi.camry.spring.SpringContextUtil;
 import com.lunzi.camry.spring.TestMethod;
 import org.apache.commons.configuration.beanutils.DefaultBeanFactory;
+import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.swing.*;
@@ -54,6 +57,14 @@ public class TestSpring {
         DefaultListableBeanFactory defaultListableBeanFactory= (DefaultListableBeanFactory) applicationContext.getAutowireCapableBeanFactory();
         BeanDefinitionBuilder builder=BeanDefinitionBuilder.genericBeanDefinition(clazz);
         defaultListableBeanFactory.registerBeanDefinition("student",builder.getBeanDefinition());
-
     }
+    @Test
+    public void test3(){
+        ClassPathResource classPathResource=new ClassPathResource("");
+        DefaultListableBeanFactory defaultBeanFactory=new DefaultListableBeanFactory();
+        XmlBeanDefinitionReader definitionReader=new XmlBeanDefinitionReader(defaultBeanFactory);
+        definitionReader.loadBeanDefinitions(classPathResource);
+    }
+
+
 }
