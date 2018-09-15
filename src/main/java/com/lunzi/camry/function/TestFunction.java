@@ -7,9 +7,22 @@ import java.util.function.Function;
  */
 public class TestFunction {
     public static void main(String args[]){
-
+        TestFunction testFunction=new TestFunction();
+        testFunction.test();
     }
-    public static void fun(Function<String,String> function){
-
+    public  void fun(Function<String,String> function){
+        int i;
+        System.out.println(function.apply("3"));
     }
+
+    public String method(String me){
+        return "123";
+    }
+    public String test(){
+        fun(x->{
+            return null;
+        });
+        return "";
+    }
+
 }
