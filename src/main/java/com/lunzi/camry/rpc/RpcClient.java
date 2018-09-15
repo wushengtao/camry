@@ -18,11 +18,17 @@ public class RpcClient {
     public static String address="127.0.0.1";
     public static Student student=new Student();
     public static void main(String args[]) throws Exception {
-        Socket socket=new Socket(address,port);
-        student.setName("wst");
-        ObjectOutputStream objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
-        objectOutputStream.writeObject(student);
-        socket.shutdownOutput();
-        objectOutputStream.close();
+        Long start=System.currentTimeMillis();
+        for(int i=0;i<3;i++){
+            Socket socket=new Socket(address,port);
+            student.setName("wst");
+            ObjectOutputStream objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
+            objectOutputStream.writeObject(student);
+            socket.shutdownOutput();
+            objectOutputStream.flush();
+            objectOutputStream.close();
+        }
+        Long end=System.currentTimeMillis();
+        System.out.println(end-start);
     }
 }
