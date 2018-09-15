@@ -6,6 +6,7 @@ import java.util.function.Function;
  * Created by lunzi on 2018/9/14 下午10:16
  */
 public class TestFunction {
+    //测试
     public static void main(String args[]){
         TestFunction testFunction=new TestFunction();
         testFunction.test();
