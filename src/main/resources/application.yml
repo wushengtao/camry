@@ -50,5 +50,7 @@ management:
     enabled: false
 logging:
   level: debug
+server:
+  port: 2028
 
 

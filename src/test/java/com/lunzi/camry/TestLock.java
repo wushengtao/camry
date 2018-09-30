@@ -1,8 +1,12 @@
 package com.lunzi.camry;
 
+import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.lunzi.camry.ao.MethodLockAO;
 import com.lunzi.camry.domain.MethodLock;
+import com.lunzi.camry.domain.QuestionContent;
+import com.lunzi.camry.function.TestFuture;
 import com.lunzi.camry.mapper.MethodLockDao;
+import com.lunzi.camry.mapper.QuestionContentDao;
 import com.lunzi.camry.spring.SpringContextUtil;
 import com.oracle.jrockit.jfr.ValueDefinition;
 import org.apache.ibatis.session.SqlSession;
@@ -20,6 +24,8 @@ import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.DefaultTransactionDefinition;
 
 import java.sql.SQLException;
+import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -32,6 +38,10 @@ public class TestLock {
     private MethodLockAO methodLockAO;
     @Autowired
     private MethodLockDao methodLockDao;
+    @Autowired
+    private QuestionContentDao questionContentDao;
+    @Autowired
+    private TestFuture testFuture;
 
     @Test
     public void test() {
@@ -62,5 +72,12 @@ public class TestLock {
         methodLockAO.getLockByName("test");
 
 
+    }
+    @Test
+    public void insert(){
+        Long start=System.currentTimeMillis();
+        testFuture.updateALL();
+        Long end=System.currentTimeMillis();
+        System.out.println(end-start);
     }
 }

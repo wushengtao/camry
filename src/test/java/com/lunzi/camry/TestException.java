@@ -1,5 +1,10 @@
 package com.lunzi.camry;
 
+import org.assertj.core.util.Lists;
+
+import java.math.BigDecimal;
+import java.util.List;
+
 /**
  * Created by lunzi on 2018/6/18 下午12:44
  */
@@ -9,11 +14,9 @@ public class TestException {
         try {
             int n=m/0;
         }catch (Exception e){
-            throw new RuntimeException(e);
-        }
+            throw new RuntimeException(e); }
     }
     public static void main(String args[]){
-        int [] a=null;
-        System.out.println(a.length);
+
     }
 }

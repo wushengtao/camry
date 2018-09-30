@@ -1,0 +1,2999 @@
+{
+	"items": [
+
+		{
+			"id": "18688659",
+			"subject": "代码全名规范中：尽量避免太长的命名，一般以少于（）个字符为宜",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879901",
+					"option_num": "A",
+					"content": "10",
+					"attach_url": ""
+				},
+				{
+					"id": "30879902",
+					"option_num": "B",
+					"content": "20",
+					"attach_url": ""
+				},
+				{
+					"id": "30879903",
+					"option_num": "C",
+					"content": "30",
+					"attach_url": ""
+				},
+				{
+					"id": "30879904",
+					"option_num": "D",
+					"content": "40",
+					"attach_url": ""
+				}
+			]
+		},
+
+		{
+			"id": "18688661",
+			"subject": "下面对基本类型与包装类型的使用规范描述不正确的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879893",
+					"option_num": "A",
+					"content": "对象属性定义使用包装类型",
+					"attach_url": ""
+				},
+				{
+					"id": "30879894",
+					"option_num": "B",
+					"content": "局部变量定义使用原始类型即非包装类型",
+					"attach_url": ""
+				},
+				{
+					"id": "30879895",
+					"option_num": "C",
+					"content": "方法参数可以使用包装类型或原始类型都可以",
+					"attach_url": ""
+				},
+				{
+					"id": "30879896",
+					"option_num": "D",
+					"content": "基本类型与包装类型可以直接进行比较",
+					"attach_url": ""
+				}
+			]
+		},
+
+
+
+		{
+			"id": "18688666",
+			"subject": "卖好车新项目结构主目录约定内容不包括",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879873",
+					"option_num": "A",
+					"content": "README.md文件",
+					"attach_url": ""
+				},
+				{
+					"id": "30879874",
+					"option_num": "B",
+					"content": "CHANGELOG.md文件",
+					"attach_url": ""
+				},
+				{
+					"id": "30879875",
+					"option_num": "C",
+					"content": "test文件夹",
+					"attach_url": ""
+				},
+				{
+					"id": "30879876",
+					"option_num": "D",
+					"content": "sql文件夹",
+					"attach_url": ""
+				}
+			]
+		},
+
+
+		{
+			"id": "18688669",
+			"subject": "如果把项目中本地文件 hello.java 的内容破坏了，如何使其还原至原始版本？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879861",
+					"option_num": "A",
+					"content": "git reset -- hello.java",
+					"attach_url": ""
+				},
+				{
+					"id": "30879862",
+					"option_num": "B",
+					"content": "git checkout HEAD -- hello.java",
+					"attach_url": ""
+				},
+				{
+					"id": "30879863",
+					"option_num": "C",
+					"content": "git revert hello.java",
+					"attach_url": ""
+				},
+				{
+					"id": "30879864",
+					"option_num": "D",
+					"content": "git update hello.java",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688670",
+			"subject": "如果提示提交内容为空、不能提交，则最为合适的处理方式是：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879857",
+					"option_num": "A",
+					"content": "执行 git status 查看状态，再执行 git add 命令选择要提交的文件，然后提交。",
+					"attach_url": ""
+				},
+				{
+					"id": "30879858",
+					"option_num": "B",
+					"content": "执行 git commit --allow-empty ，允许空提交。",
+					"attach_url": ""
+				},
+				{
+					"id": "30879859",
+					"option_num": "C",
+					"content": "执行 git commit -a ，提交所有改动。",
+					"attach_url": ""
+				},
+				{
+					"id": "30879860",
+					"option_num": "D",
+					"content": "执行 git commit --amend 进行修补提交",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688671",
+			"subject": "我使用和其他人不一样的IDE软件，总是在目录下生成以 .xx 为后缀的临时文件。如何避免由于自己的误操作导致此类文件被添加到版本库中呢？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879853",
+					"option_num": "A",
+					"content": "执行 git clean -f 删除临时性文件。",
+					"attach_url": ""
+				},
+				{
+					"id": "30879854",
+					"option_num": "B",
+					"content": "向版本库中添加一个 .gitignore 文件，其中包含一条内容为 *.xx 的记录。",
+					"attach_url": ""
+				},
+				{
+					"id": "30879855",
+					"option_num": "C",
+					"content": "每次都“git checkout -- .XX”取消本地这些文件的修改",
+					"attach_url": ""
+				},
+				{
+					"id": "30879856",
+					"option_num": "D",
+					"content": "更换另外一款IDE软件",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688672",
+			"subject": "关于git-flow以下描述错误的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "E",
+			"score": 2.5,
+			"options": [{
+					"id": "30879848",
+					"option_num": "A",
+					"content": "永远不要在master分支上提交代码，执行了git flow init命令后，会自动从master拉取创建develop分支",
+					"attach_url": ""
+				},
+				{
+					"id": "30879849",
+					"option_num": "B",
+					"content": "feature分支完成后可以直接合并到develop分支，或者合并到从develop分支拉取出来的release分支，但不能直接合入master分支",
+					"attach_url": ""
+				},
+				{
+					"id": "30879850",
+					"option_num": "C",
+					"content": "hotfix跟release分支完成后都得合入master跟develop分支",
+					"attach_url": ""
+				},
+				{
+					"id": "30879851",
+					"option_num": "D",
+					"content": "一周可以开发完成的需求可以直接在hotfix分支上开发完成",
+					"attach_url": ""
+				},
+				{
+					"id": "30879852",
+					"option_num": "E",
+					"content": "git-flow跟git一样都是代码管理工具",
+					"attach_url": ""
+				}
+			]
+		},
+
+		{
+			"id": "18688674",
+			"subject": "以下哪些分支的命名是符合卖好车git代码分支管理规范的？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879838",
+					"option_num": "A",
+					"content": "hotfix/wenwen_warehouseVisual20180517",
+					"attach_url": ""
+				},
+				{
+					"id": "30879839",
+					"option_num": "B",
+					"content": "hotfix/warehouse_city_0817",
+					"attach_url": ""
+				},
+				{
+					"id": "30879840",
+					"option_num": "C",
+					"content": "release/master_sprint3_20180403",
+					"attach_url": ""
+				},
+				{
+					"id": "30879841",
+					"option_num": "D",
+					"content": "feature/login_wenwen_20171109",
+					"attach_url": ""
+				},
+				{
+					"id": "30879842",
+					"option_num": "E",
+					"content": "以上都不是",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688675",
+			"subject": "关于测试环境应用看日志以下说法错误的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879834",
+					"option_num": "A",
+					"content": "可以通过root/taobao1234登录测试服务器查看",
+					"attach_url": ""
+				},
+				{
+					"id": "30879835",
+					"option_num": "B",
+					"content": "有些应用比如senna，它开发环境的日志设置是在项目工程里的logback文件里指定的",
+					"attach_url": ""
+				},
+				{
+					"id": "30879836",
+					"option_num": "C",
+					"content": "Spring Boot应用每一套测试环境的日志都要单独设置",
+					"attach_url": ""
+				},
+				{
+					"id": "30879837",
+					"option_num": "D",
+					"content": "测试环境容器里的应用日志一般放在宿主机的/home/admin/app/logs/appname下",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688676",
+			"subject": "关于测试环境的使用方法以下正确的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "E",
+			"score": 2.5,
+			"options": [{
+					"id": "30879829",
+					"option_num": "A",
+					"content": "管尚的mclaren不能被外网访问，所以必须要用菩萨的mclaren, 只有这个环境才可以被外网访问",
+					"attach_url": ""
+				},
+				{
+					"id": "30879830",
+					"option_num": "B",
+					"content": "daocloud上的容器处于运行中，即表示应用已经启动成功",
+					"attach_url": ""
+				},
+				{
+					"id": "30879831",
+					"option_num": "C",
+					"content": "hummer需要依赖commonservice，则直接在专用环境自己搭建一个commonservice即可",
+					"attach_url": ""
+				},
+				{
+					"id": "30879832",
+					"option_num": "D",
+					"content": "不同测试环境的配置文件可以相互被替代使用",
+					"attach_url": ""
+				},
+				{
+					"id": "30879833",
+					"option_num": "E",
+					"content": "以上说法都不对",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688677",
+			"subject": "关于测试环境以下说法错误的有？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879824",
+					"option_num": "A",
+					"content": "公司目前只有4套外网测试环境：菩萨、y、allah、black",
+					"attach_url": ""
+				},
+				{
+					"id": "30879825",
+					"option_num": "B",
+					"content": "公司内网测试环境共用同一套zk",
+					"attach_url": ""
+				},
+				{
+					"id": "30879826",
+					"option_num": "C",
+					"content": "所有测试环境共用一个测试数据库",
+					"attach_url": ""
+				},
+				{
+					"id": "30879827",
+					"option_num": "D",
+					"content": "所有测试环境的rocket mq是共用的一套",
+					"attach_url": ""
+				},
+				{
+					"id": "30879828",
+					"option_num": "E",
+					"content": "所有测试环境共用一套redis",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688678",
+			"subject": "关于jenkins发布系统以下说法错误的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879820",
+					"option_num": "A",
+					"content": "当blueocean插件的UI由蓝色变为绿色即可认为应用发布成功了",
+					"attach_url": ""
+				},
+				{
+					"id": "30879821",
+					"option_num": "B",
+					"content": "Java应用手动启动构建时弹框里的TAG参数是指git操作上打的tag",
+					"attach_url": ""
+				},
+				{
+					"id": "30879822",
+					"option_num": "C",
+					"content": "Java应用手动启动构建时弹框里的PROJECT参数是指git项目工程里启动模块的文件夹名字",
+					"attach_url": ""
+				},
+				{
+					"id": "30879823",
+					"option_num": "D",
+					"content": "线上镜像仓库跟线下镜像仓库分别是reg.maihaoche.com跟reg.haimaiche.net",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688679",
+			"subject": "配置maven的setting.xml文件的时候，一般我们不需要配置：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879816",
+					"option_num": "A",
+					"content": "servers节点",
+					"attach_url": ""
+				},
+				{
+					"id": "30879817",
+					"option_num": "B",
+					"content": "profiles节点",
+					"attach_url": ""
+				},
+				{
+					"id": "30879818",
+					"option_num": "C",
+					"content": "proxies节点",
+					"attach_url": ""
+				},
+				{
+					"id": "30879819",
+					"option_num": "D",
+					"content": "activeProfiles节点",
+					"attach_url": ""
+				}
+			]
+		},
+
+		{
+			"id": "18688681",
+			"subject": "以下对maven依赖范围叙述错误的是：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879808",
+					"option_num": "A",
+					"content": "compile：对全部classpath都有效",
+					"attach_url": ""
+				},
+				{
+					"id": "30879809",
+					"option_num": "B",
+					"content": "test：只对测试classpath有效",
+					"attach_url": ""
+				},
+				{
+					"id": "30879810",
+					"option_num": "C",
+					"content": "runtime：只对运行classpath有效",
+					"attach_url": ""
+				},
+				{
+					"id": "30879811",
+					"option_num": "D",
+					"content": "provided：对编译和测试classpath有效。",
+					"attach_url": ""
+				}
+			]
+		},
+
+
+
+		{
+			"id": "18688685",
+			"subject": "以下哪个是强制更新的命令：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879792",
+					"option_num": "A",
+					"content": "mvn clean",
+					"attach_url": ""
+				},
+				{
+					"id": "30879793",
+					"option_num": "B",
+					"content": "mvn install",
+					"attach_url": ""
+				},
+				{
+					"id": "30879794",
+					"option_num": "C",
+					"content": "mvn clean install -U",
+					"attach_url": ""
+				},
+				{
+					"id": "30879795",
+					"option_num": "D",
+					"content": "mvn clean install -F",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688686",
+			"subject": "以下生命周期对应的执行任务描述错误的是：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879788",
+					"option_num": "A",
+					"content": "compile：编译主代码至主输出目录",
+					"attach_url": ""
+				},
+				{
+					"id": "30879789",
+					"option_num": "B",
+					"content": "test：执行测试用例",
+					"attach_url": ""
+				},
+				{
+					"id": "30879790",
+					"option_num": "C",
+					"content": "package：创建项目jar包",
+					"attach_url": ""
+				},
+				{
+					"id": "30879791",
+					"option_num": "D",
+					"content": "deploy:将项目构建安装到本地仓库",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688687",
+			"subject": "版本发布时以下做法恰当的是：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879784",
+					"option_num": "A",
+					"content": "所有自动化测试全部通过",
+					"attach_url": ""
+				},
+				{
+					"id": "30879785",
+					"option_num": "B",
+					"content": "项目配置了快照版本的依赖",
+					"attach_url": ""
+				},
+				{
+					"id": "30879786",
+					"option_num": "C",
+					"content": "项目配置了快照版本的插件",
+					"attach_url": ""
+				},
+				{
+					"id": "30879787",
+					"option_num": "D",
+					"content": "项目依赖了同一jar包的多个版本",
+					"attach_url": ""
+				}
+			]
+		},
+
+		{
+			"id": "18688689",
+			"subject": "以下哪个表名称的命名是正确示范",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879776",
+					"option_num": "A",
+					"content": "tms_oderCharge",
+					"attach_url": ""
+				},
+				{
+					"id": "30879777",
+					"option_num": "B",
+					"content": "wf_flow_task",
+					"attach_url": ""
+				},
+				{
+					"id": "30879778",
+					"option_num": "C",
+					"content": "bi_transport_c",
+					"attach_url": ""
+				},
+				{
+					"id": "30879779",
+					"option_num": "D",
+					"content": "wms_car_photos",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688690",
+			"subject": "按照公司设计规范，以下哪个做法是可以接受的",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879772",
+					"option_num": "A",
+					"content": "为了保证数据的一致性，可以用触发器保证数据的完整性",
+					"attach_url": ""
+				},
+				{
+					"id": "30879773",
+					"option_num": "B",
+					"content": "为了保证数据的一致性，可以用外键来保证数据的完整性",
+					"attach_url": ""
+				},
+				{
+					"id": "30879774",
+					"option_num": "C",
+					"content": "为了满足业务需求，可以在mysql数据库中存储html文本，这样可以实现页面动态渲染",
+					"attach_url": ""
+				},
+				{
+					"id": "30879775",
+					"option_num": "D",
+					"content": "有些签证是pdf文件，可以将pdf经过base64后直接存储到数据库中",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688691",
+			"subject": "以下说法错误的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879768",
+					"option_num": "A",
+					"content": "必须使用INNODB存储引擎，它具有事务、行锁等特性",
+					"attach_url": ""
+				},
+				{
+					"id": "30879769",
+					"option_num": "B",
+					"content": "mysql的UTF8字符集可以存储任何字符，包括任意汉字、英文",
+					"attach_url": ""
+				},
+				{
+					"id": "30879770",
+					"option_num": "C",
+					"content": "所有表、字段必须都添加注释",
+					"attach_url": ""
+				},
+				{
+					"id": "30879771",
+					"option_num": "D",
+					"content": "主键尽量采用自增方式，InnoDB表实际是一棵索引组织表，顺序存储可以提高存取效率",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688692",
+			"subject": "以下说法正确的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879764",
+					"option_num": "A",
+					"content": "冗余字段消耗磁盘空间，并且难以保证数据的一致性完整性，难以管理，所以杜绝使用",
+					"attach_url": ""
+				},
+				{
+					"id": "30879765",
+					"option_num": "B",
+					"content": "在字段设计的过程中，尽量使用短数据类型，根据实际情况使用选择 float、 double、 decimal，以节省空间",
+					"attach_url": ""
+				},
+				{
+					"id": "30879766",
+					"option_num": "C",
+					"content": "存储长度大于5000时，定义字段类型应该定义为text，单独用一张表存储，通过主键与其他表做关联",
+					"attach_url": ""
+				},
+				{
+					"id": "30879767",
+					"option_num": "D",
+					"content": "varchar(N), N表示的是字节数而不是字符数",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688693",
+			"subject": "以下说法错误的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879760",
+					"option_num": "A",
+					"content": "存储年使用YEAR",
+					"attach_url": ""
+				},
+				{
+					"id": "30879761",
+					"option_num": "B",
+					"content": "存储日期使用DATE",
+					"attach_url": ""
+				},
+				{
+					"id": "30879762",
+					"option_num": "C",
+					"content": "datetime 比 timestamp 更节省空间，故优先使用datetime",
+					"attach_url": ""
+				},
+				{
+					"id": "30879763",
+					"option_num": "D",
+					"content": "timestamp与时区有关，datetime与时区无关",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688694",
+			"subject": "以下说法正确的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879756",
+					"option_num": "A",
+					"content": "表必备三字段：创建时间(gmt_create), 修改时间(gmt_modified)、 是否逻辑删除（is_deleted)",
+					"attach_url": ""
+				},
+				{
+					"id": "30879757",
+					"option_num": "B",
+					"content": "空值是占用空间的，NULL是不占用空间的",
+					"attach_url": ""
+				},
+				{
+					"id": "30879758",
+					"option_num": "C",
+					"content": "字段尽量都定义为 NOT NULL，并且设置默认值，NULL值可能会导致索引的效率大大下降",
+					"attach_url": ""
+				},
+				{
+					"id": "30879759",
+					"option_num": "D",
+					"content": "同一意义的字段在不同的表中定义必须相同，类型必须相同，长度可以不同",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688695",
+			"subject": "以下说法正确的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879752",
+					"option_num": "A",
+					"content": "NULL<> NULL 的返回结果是 true",
+					"attach_url": ""
+				},
+				{
+					"id": "30879753",
+					"option_num": "B",
+					"content": "NULL = NULL 的返回结果是 true",
+					"attach_url": ""
+				},
+				{
+					"id": "30879754",
+					"option_num": "C",
+					"content": "NULL <> 0 的返回结果是 false",
+					"attach_url": ""
+				},
+				{
+					"id": "30879755",
+					"option_num": "D",
+					"content": "NULL = 1 的返回结果是 NULL",
+					"attach_url": ""
+				}
+			]
+		},
+
+		{
+			"id": "18688697",
+			"subject": "根据索引的最左前缀原则，建立索引(a,b,c)，相当于建了以下哪些索引",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879744",
+					"option_num": "A",
+					"content": "(b,c)  ",
+					"attach_url": ""
+				},
+				{
+					"id": "30879745",
+					"option_num": "B",
+					"content": "(a,c)",
+					"attach_url": ""
+				},
+				{
+					"id": "30879746",
+					"option_num": "C",
+					"content": "(a,b)",
+					"attach_url": ""
+				},
+				{
+					"id": "30879747",
+					"option_num": "D",
+					"content": "(c)",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688698",
+			"subject": "以下说法合理的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879740",
+					"option_num": "A",
+					"content": "建表的时候，不需要考虑建索引，项目上线后，根据sql执行情况，再建立索引即可",
+					"attach_url": ""
+				},
+				{
+					"id": "30879741",
+					"option_num": "B",
+					"content": "尽量不要在低基数列上建立索引，例如性别、类型",
+					"attach_url": ""
+				},
+				{
+					"id": "30879742",
+					"option_num": "C",
+					"content": "同一个表的索引个数越多越好，因为索引可以大大提高检索效率",
+					"attach_url": ""
+				},
+				{
+					"id": "30879743",
+					"option_num": "D",
+					"content": "SQL 性能优化的目标中，ref 级别是最好的",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688699",
+			"subject": "以下说法错误的是",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879736",
+					"option_num": "A",
+					"content": "mysql 默认的事务隔离级别是 repeatable read（可重读）",
+					"attach_url": ""
+				},
+				{
+					"id": "30879737",
+					"option_num": "B",
+					"content": "mysql 加锁跟索引没有关系，没有索引，行锁并不会升级为表锁",
+					"attach_url": ""
+				},
+				{
+					"id": "30879738",
+					"option_num": "C",
+					"content": "RR 事务隔离级别会出现幻读",
+					"attach_url": ""
+				},
+				{
+					"id": "30879739",
+					"option_num": "D",
+					"content": "如果在两个 session 中访问两个表的顺序不同，可能会发生死锁",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688700",
+			"subject": "某论坛中的热点帖子内容需要进行redis存储，下列选项中，哪种最符合key名设计要素：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879732",
+					"option_num": "A",
+					"content": "bbsid:columnsid:noteid:ownerid",
+					"attach_url": ""
+				},
+				{
+					"id": "30879733",
+					"option_num": "B",
+					"content": "bbs_columns_note_owner",
+					"attach_url": ""
+				},
+				{
+					"id": "30879734",
+					"option_num": "C",
+					"content": "b_c_n_o",
+					"attach_url": ""
+				},
+				{
+					"id": "30879735",
+					"option_num": "D",
+					"content": "bid:cid:nid:oid",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688701",
+			"subject": "关于bigkey的风险避免，下列哪条描述最准确：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879728",
+					"option_num": "A",
+					"content": "string类型控制在10KB以内，hash、list、set、zset元素个数不要超过5000",
+					"attach_url": ""
+				},
+				{
+					"id": "30879729",
+					"option_num": "B",
+					"content": "string类型控制在20KB以内，hash、list、set、zset元素个数不要超过10000",
+					"attach_url": ""
+				},
+				{
+					"id": "30879730",
+					"option_num": "C",
+					"content": "string类型控制在100KB以内，hash、list、set、zset元素个数不要超过50000",
+					"attach_url": ""
+				},
+				{
+					"id": "30879731",
+					"option_num": "D",
+					"content": "string类型控制在5KB以内，hash、list、set、zset元素个数不要超过1000",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688702",
+			"subject": "下列操作哪些是禁止使用的：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879724",
+					"option_num": "A",
+					"content": "keys、flushall、flushdb",
+					"attach_url": ""
+				},
+				{
+					"id": "30879725",
+					"option_num": "B",
+					"content": "hgetall、lrange、smembers、zrange、sinter",
+					"attach_url": ""
+				},
+				{
+					"id": "30879726",
+					"option_num": "C",
+					"content": "PFCOUNT、ZRANGEBYSCORE、INCRBYFLOAT",
+					"attach_url": ""
+				},
+				{
+					"id": "30879727",
+					"option_num": "D",
+					"content": "HSTRLEN、HSTRLEN、RPOPLPUSH",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688703",
+			"subject": "关于redis事务，下列哪个说法正确：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879720",
+					"option_num": "A",
+					"content": "收到 EXEC 命令后进入事务执行，事务中任意命令执行失败，其余的命令依然被执行；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879721",
+					"option_num": "B",
+					"content": "收到 EXEC 命令后进入事务执行，事务中任意命令执行失败，其余的命令不会被执行；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879722",
+					"option_num": "C",
+					"content": "自从 2.6.5 版本以后，事务中任意命令执行失败，就拒绝执行事务里的其他命令；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879723",
+					"option_num": "D",
+					"content": "自从 2.6.5 版本以后，事务中失败回滚有全体连坐和冤头债主两种情况，全体连坐是说如果命令在往事务里排队的时候就有语法错误，客户端就会直接取消事务；冤头债主不是语法错误，单个命令失败不影响其他命令的执行；",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688704",
+			"subject": "在批量加载缓存数据的开发场景中，指定了统一过期时间，该操作有什么隐患：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879716",
+					"option_num": "A",
+					"content": "缓存穿透；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879717",
+					"option_num": "B",
+					"content": "缓存雪崩；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879718",
+					"option_num": "C",
+					"content": "缓存击穿；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879719",
+					"option_num": "D",
+					"content": "缓存失效；",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688705",
+			"subject": "缓存雪崩是指：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879712",
+					"option_num": "A",
+					"content": "缓存在某一时刻同时失效，请求全部转发到DB；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879713",
+					"option_num": "B",
+					"content": "查询一个一定不存在的数据，导致这个不存在的数据每次请求都要到存储层去查询；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879714",
+					"option_num": "C",
+					"content": "缓存在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879715",
+					"option_num": "D",
+					"content": "缓存服务器被运维砸了；",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688706",
+			"subject": "缓存穿透是指：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879708",
+					"option_num": "A",
+					"content": "缓存在某一时刻同时失效，请求全部转发到DB；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879709",
+					"option_num": "B",
+					"content": "查询一个一定不存在的数据，导致这个不存在的数据每次请求都要到存储层去查询；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879710",
+					"option_num": "C",
+					"content": "缓存在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879711",
+					"option_num": "D",
+					"content": "缓存服务器被运维砸了；",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688707",
+			"subject": "缓存击穿是指：",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879704",
+					"option_num": "A",
+					"content": "缓存在某一时刻同时失效，请求全部转发到DB；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879705",
+					"option_num": "B",
+					"content": "查询一个一定不存在的数据，导致这个不存在的数据每次请求都要到存储层去查询；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879706",
+					"option_num": "C",
+					"content": "缓存在某个时间点过期的时候，恰好在这个时间点对这个Key有大量的并发请求过来，这些请求发现缓存过期一般都会从后端DB加载数据并回设到缓存；",
+					"attach_url": ""
+				},
+				{
+					"id": "30879707",
+					"option_num": "D",
+					"content": "缓存服务器被运维砸了；",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688708",
+			"subject": "Dubbo默认启动时是否会检查依赖服务是否可用？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879702",
+					"option_num": "A",
+					"content": "是",
+					"attach_url": ""
+				},
+				{
+					"id": "30879703",
+					"option_num": "B",
+					"content": "否",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688709",
+			"subject": "Dubbo默认的负载均衡策略是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879698",
+					"option_num": "A",
+					"content": "Random",
+					"attach_url": ""
+				},
+				{
+					"id": "30879699",
+					"option_num": "B",
+					"content": "RoundRobin",
+					"attach_url": ""
+				},
+				{
+					"id": "30879700",
+					"option_num": "C",
+					"content": "LeastActive",
+					"attach_url": ""
+				},
+				{
+					"id": "30879701",
+					"option_num": "D",
+					"content": "ConsistentHash",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688710",
+			"subject": "下列序列化框架中Dubbo最新支持的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879694",
+					"option_num": "A",
+					"content": "Hessian",
+					"attach_url": ""
+				},
+				{
+					"id": "30879695",
+					"option_num": "B",
+					"content": "Duddo",
+					"attach_url": ""
+				},
+				{
+					"id": "30879696",
+					"option_num": "C",
+					"content": "FastJason",
+					"attach_url": ""
+				},
+				{
+					"id": "30879697",
+					"option_num": "D",
+					"content": "Kryo",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688711",
+			"subject": "卖好车Dubbo注册中心有几套？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879690",
+					"option_num": "A",
+					"content": "1套",
+					"attach_url": ""
+				},
+				{
+					"id": "30879691",
+					"option_num": "B",
+					"content": "2套",
+					"attach_url": ""
+				},
+				{
+					"id": "30879692",
+					"option_num": "C",
+					"content": "3套",
+					"attach_url": ""
+				},
+				{
+					"id": "30879693",
+					"option_num": "D",
+					"content": "4套",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688712",
+			"subject": "某A应用订阅了B应用dubbo接口，在启动时如果不想验证服务是否可用，可进行怎样的设置？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "B",
+			"score": 2.5,
+			"options": [{
+					"id": "30879686",
+					"option_num": "A",
+					"content": "<dubbo:reference>中设置retries为0",
+					"attach_url": ""
+				},
+				{
+					"id": "30879687",
+					"option_num": "B",
+					"content": "<dubbo:reference>中设置check为false",
+					"attach_url": ""
+				},
+				{
+					"id": "30879688",
+					"option_num": "C",
+					"content": "<dubbo:service>中设置retries为0",
+					"attach_url": ""
+				},
+				{
+					"id": "30879689",
+					"option_num": "D",
+					"content": "<dubbo:service>中设置check为false",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688713",
+			"subject": "<dubbo:service>中的toekn作用是什么？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "A",
+			"score": 2.5,
+			"options": [{
+					"id": "30879682",
+					"option_num": "A",
+					"content": "防止消费者绕过注册中心直接访问",
+					"attach_url": ""
+				},
+				{
+					"id": "30879683",
+					"option_num": "B",
+					"content": "防止消费者恶意频繁调用服务",
+					"attach_url": ""
+				},
+				{
+					"id": "30879684",
+					"option_num": "C",
+					"content": "为了验证消费者身份，没特殊作用",
+					"attach_url": ""
+				},
+				{
+					"id": "30879685",
+					"option_num": "D",
+					"content": "以上都不对",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688714",
+			"subject": "以下不属于DubboAdmin管理台搜索条件的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879678",
+					"option_num": "A",
+					"content": "服务名",
+					"attach_url": ""
+				},
+				{
+					"id": "30879679",
+					"option_num": "B",
+					"content": "应用名",
+					"attach_url": ""
+				},
+				{
+					"id": "30879680",
+					"option_num": "C",
+					"content": "机器名",
+					"attach_url": ""
+				},
+				{
+					"id": "30879681",
+					"option_num": "D",
+					"content": "机器IP",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688715",
+			"subject": "下列方法能较快统计每个应用使用的dubbo版本号的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879674",
+					"option_num": "A",
+					"content": "查看源码中pom文件中dubbo版本",
+					"attach_url": ""
+				},
+				{
+					"id": "30879675",
+					"option_num": "B",
+					"content": "通过IDEA,show dependencies查看依赖书找到dubbo版本",
+					"attach_url": ""
+				},
+				{
+					"id": "30879676",
+					"option_num": "C",
+					"content": "DubboAdmin中系统快照中查找",
+					"attach_url": ""
+				},
+				{
+					"id": "30879677",
+					"option_num": "D",
+					"content": "没办法统计",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688716",
+			"subject": "以下对Dubbo接口实现类中出现的异常处理最恰当的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879670",
+					"option_num": "A",
+					"content": "用try-catch包裹，打印错误日志，返回正确结果",
+					"attach_url": ""
+				},
+				{
+					"id": "30879671",
+					"option_num": "B",
+					"content": "不处理，让其抛给调用方处理",
+					"attach_url": ""
+				},
+				{
+					"id": "30879672",
+					"option_num": "C",
+					"content": "用try-catch包裹，打印错误日志，事务回滚，返回错误结果",
+					"attach_url": ""
+				},
+				{
+					"id": "30879673",
+					"option_num": "D",
+					"content": "用framework中提供的EnableExceptionManagement注解，统一异常处理",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688717",
+			"subject": "卖好车Dubbo接口命名统一的后缀是什么？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "C",
+			"score": 2.5,
+			"options": [{
+					"id": "30879666",
+					"option_num": "A",
+					"content": "Service",
+					"attach_url": ""
+				},
+				{
+					"id": "30879667",
+					"option_num": "B",
+					"content": "Interface",
+					"attach_url": ""
+				},
+				{
+					"id": "30879668",
+					"option_num": "C",
+					"content": "Facade",
+					"attach_url": ""
+				},
+				{
+					"id": "30879669",
+					"option_num": "D",
+					"content": "统一前缀I",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688718",
+			"subject": "卖好车目前约定的Dubbo接口统一返回对象是什么？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879662",
+					"option_num": "A",
+					"content": "DTO对象",
+					"attach_url": ""
+				},
+				{
+					"id": "30879663",
+					"option_num": "B",
+					"content": "BizResult",
+					"attach_url": ""
+				},
+				{
+					"id": "30879664",
+					"option_num": "C",
+					"content": "Json结构字符串",
+					"attach_url": ""
+				},
+				{
+					"id": "30879665",
+					"option_num": "D",
+					"content": "APIResult",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688719",
+			"subject": "出现RpcException: No provider available for remote service异常下列做法不对的是？",
+			"type": "radio",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756447,
+			"hasattach": 0,
+			"answer": "D",
+			"score": 2.5,
+			"options": [{
+					"id": "30879658",
+					"option_num": "A",
+					"content": "检查连接的注册中心是否正确",
+					"attach_url": ""
+				},
+				{
+					"id": "30879659",
+					"option_num": "B",
+					"content": "到注册中心查看相应的服务提供者是否存在",
+					"attach_url": ""
+				},
+				{
+					"id": "30879660",
+					"option_num": "C",
+					"content": "检查服务提供者是否正常运行",
+					"attach_url": ""
+				},
+				{
+					"id": "30879661",
+					"option_num": "D",
+					"content": "找旦总解决",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688720",
+			"subject": "关于git-flow分支的以下描述，正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076762",
+					"option_num": "A",
+					"content": "主要分支有master，develop，辅助分支有feature，release，hotfix",
+					"attach_url": ""
+				},
+				{
+					"id": "22076763",
+					"option_num": "B",
+					"content": "生产环境最好永远发布master分支",
+					"attach_url": ""
+				},
+				{
+					"id": "22076764",
+					"option_num": "C",
+					"content": "辅助分支的代码被合并到了主干分支之后任务才算是完成，而被合并到主干分支必须要经过Code Review，这是强制的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076765",
+					"option_num": "D",
+					"content": "feature，release，hotfix分支的完整写法应该是feature／branchname,release／branchname,hotfix／branchname",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688721",
+			"subject": "请排出把一行代码提交到远程仓库的命令正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,B,C",
+			"score": 2.5,
+			"options": [{
+					"id": "22076758",
+					"option_num": "A",
+					"content": "git add",
+					"attach_url": ""
+				},
+				{
+					"id": "22076759",
+					"option_num": "B",
+					"content": "git commit -m ",
+					"attach_url": ""
+				},
+				{
+					"id": "22076760",
+					"option_num": "C",
+					"content": "git push",
+					"attach_url": ""
+				},
+				{
+					"id": "22076761",
+					"option_num": "D",
+					"content": "git fetch",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688722",
+			"subject": "将本地的一个存在的文件夹推送到远程git仓库，以下操作正确的有？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,B,C,D,E,F",
+			"score": 2.5,
+			"options": [{
+					"id": "22076752",
+					"option_num": "A",
+					"content": "cd existing_folder",
+					"attach_url": ""
+				},
+				{
+					"id": "22076753",
+					"option_num": "B",
+					"content": "git init",
+					"attach_url": ""
+				},
+				{
+					"id": "22076754",
+					"option_num": "C",
+					"content": "git remote add origin git@git.dawanju.net:yudan/volume.git",
+					"attach_url": ""
+				},
+				{
+					"id": "22076755",
+					"option_num": "D",
+					"content": "git add .",
+					"attach_url": ""
+				},
+				{
+					"id": "22076756",
+					"option_num": "E",
+					"content": "git commit",
+					"attach_url": ""
+				},
+				{
+					"id": "22076757",
+					"option_num": "F",
+					"content": "git push -u origin master",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688723",
+			"subject": "关于git flow流程以下表述错误的有？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076748",
+					"option_num": "A",
+					"content": "feature分支是从最新的master分支拉取出来的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076749",
+					"option_num": "B",
+					"content": "release分支上可以进行bugfix",
+					"attach_url": ""
+				},
+				{
+					"id": "22076750",
+					"option_num": "C",
+					"content": "可以直接拿release分支去发布线上",
+					"attach_url": ""
+				},
+				{
+					"id": "22076751",
+					"option_num": "D",
+					"content": "hotfix分支在完成后可以被重复使用开发后面的小需求",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688724",
+			"subject": "想把一个gitlab上的代码仓库拉到本地以下做法正确的有？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076744",
+					"option_num": "A",
+					"content": "找运维同事开通gitlab账号",
+					"attach_url": ""
+				},
+				{
+					"id": "22076745",
+					"option_num": "B",
+					"content": "找对应应用的owner分配关联应用或group的权限",
+					"attach_url": ""
+				},
+				{
+					"id": "22076746",
+					"option_num": "C",
+					"content": "在自己本地电脑运行ssh-keygen 在家目录的.ssh文件夹下生成id_rsa跟id_rsa.pub文件，并将id_rsa.pub的内容放置到个人gitlab账户的settings下的SSH Keys页面",
+					"attach_url": ""
+				},
+				{
+					"id": "22076747",
+					"option_num": "D",
+					"content": "执行git clone 命令克隆代码仓库到本地",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688725",
+			"subject": "关于git拉取代码以下操作正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756442,
+			"hasattach": 0,
+			"answer": "A,B,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076740",
+					"option_num": "A",
+					"content": "先pull，再push",
+					"attach_url": ""
+				},
+				{
+					"id": "22076741",
+					"option_num": "B",
+					"content": "在自己的分支上开发功能时，经常不定期的将master合入自己的分支，可以有效减少最后合入代码时的冲突",
+					"attach_url": ""
+				},
+				{
+					"id": "22076742",
+					"option_num": "C",
+					"content": "合并代码遇上冲突时一般只需选择保留自己的代码即可",
+					"attach_url": ""
+				},
+				{
+					"id": "22076743",
+					"option_num": "D",
+					"content": "本地有修改未提交时，可以先git stash保存本地的改动，然后再pull",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688726",
+			"subject": "关于应用发布是否成功错误的说法是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "A,B",
+			"score": 2.5,
+			"options": [{
+					"id": "22076736",
+					"option_num": "A",
+					"content": "Spring boot应用发布成功的日志类似于“2018-08-13 10:39:09.347:INFO::Started SelectChannelConnector@0.0.0.0:7018”",
+					"attach_url": ""
+				},
+				{
+					"id": "22076737",
+					"option_num": "B",
+					"content": "Spring mvc应用发布成功的一般日志类似于“Started XXXApplication in 34.45 seconds (JVM running for 35.945)”",
+					"attach_url": ""
+				},
+				{
+					"id": "22076738",
+					"option_num": "C",
+					"content": "测试环境tida应用缺少配置导致应用编译进入死循环，此时jenkins界面响应很慢，必须赶紧在jenkins上停止当前构建任务",
+					"attach_url": ""
+				},
+				{
+					"id": "22076739",
+					"option_num": "D",
+					"content": "dubbo服务会比web服务最先注册",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688727",
+			"subject": "关于测试环境日志查看的方法以下说法正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "A,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076732",
+					"option_num": "A",
+					"content": "可以直接查看容器的日志（docker logs -ft container_name ），来查看应用启动过程中的日志情况",
+					"attach_url": ""
+				},
+				{
+					"id": "22076733",
+					"option_num": "B",
+					"content": "对于体积较大的日志文件，通过vi命令查看比较合适",
+					"attach_url": ""
+				},
+				{
+					"id": "22076734",
+					"option_num": "C",
+					"content": "对于体积较小的日志文件，通过less或more查看比较合适",
+					"attach_url": ""
+				},
+				{
+					"id": "22076735",
+					"option_num": "D",
+					"content": "持续侦测一个日志文件可以使用命令：tail -f 200 app.log",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688728",
+			"subject": "关于应用配置文件的说法以下正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076728",
+					"option_num": "A",
+					"content": "spring mvc的配置是在war包启动时再拉取加载的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076729",
+					"option_num": "B",
+					"content": "spring boot应用的配置是在jar包启动时拉取加载的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076730",
+					"option_num": "C",
+					"content": "测试环境的spring boot应用是在jar包启动时从应用的工程目录里拉取加载配置文件的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076731",
+					"option_num": "D",
+					"content": "spring boot应用的配置格式可以是yml的，也可以是properties形式的",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688729",
+			"subject": "关于应用配置文件以下说法错误的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "B,C",
+			"score": 2.5,
+			"options": [{
+					"id": "22076724",
+					"option_num": "A",
+					"content": "现在我们的java应用除了spring mvc的就只有spring boot的格式的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076725",
+					"option_num": "B",
+					"content": "开发因为项目需要可以直接在自己专用环境的配置文件增加配置项",
+					"attach_url": ""
+				},
+				{
+					"id": "22076726",
+					"option_num": "C",
+					"content": "测试环境redis的端口是6379",
+					"attach_url": ""
+				},
+				{
+					"id": "22076727",
+					"option_num": "D",
+					"content": "应用配置文件里尽量不要有重复的，废弃不用的配置项",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688730",
+			"subject": "关于jenkins发布系统以下说法正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "A,B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076720",
+					"option_num": "A",
+					"content": "所有通过pipeline构建的java应用，其构建流水线包含的节点，是定义在每个应用根目录下的Jenkinsfile文件里的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076721",
+					"option_num": "B",
+					"content": "正常每次流水线构建都包含了“Check，Package， Deploy”等基础阶段",
+					"attach_url": ""
+				},
+				{
+					"id": "22076722",
+					"option_num": "C",
+					"content": "只有分支名包含“sonar“的分支的流水线构建才会经历Analysis跟Test阶段",
+					"attach_url": ""
+				},
+				{
+					"id": "22076723",
+					"option_num": "D",
+					"content": "每次构建后都会清理该job的workspace",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688731",
+			"subject": "关于在jenkins发布系统发布应用以下说法正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "A,B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076716",
+					"option_num": "A",
+					"content": "每次都要checkout所在分支的最新的代码，或者指定tag的代码",
+					"attach_url": ""
+				},
+				{
+					"id": "22076717",
+					"option_num": "B",
+					"content": "JAVA应用的package阶段其实执行了maven package然后将打好的war包或jar包借助dockerfile-maven-plugin打成镜像",
+					"attach_url": ""
+				},
+				{
+					"id": "22076718",
+					"option_num": "C",
+					"content": "流水线里Package阶段打好的镜像应该被推送的仓库是在jenkins参数化构建的REPO参数里指定的",
+					"attach_url": ""
+				},
+				{
+					"id": "22076719",
+					"option_num": "D",
+					"content": "流水线里Deploy阶段其实仅仅是将放在私有镜像仓库里的docker镜像在远程服务器上pull然后部署",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688732",
+			"subject": "关于应用部署环境以下说法正确的是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "A,B,C,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076712",
+					"option_num": "A",
+					"content": "总共有四大套环境，分别为：online, pre, 公网测试，内网测试",
+					"attach_url": ""
+				},
+				{
+					"id": "22076713",
+					"option_num": "B",
+					"content": "online跟pre共用一套zk，访问地址为zk.maihaoche.com:9999",
+					"attach_url": ""
+				},
+				{
+					"id": "22076714",
+					"option_num": "C",
+					"content": "y跟black环境共用一套zk，rocket mq消息各自独立",
+					"attach_url": ""
+				},
+				{
+					"id": "22076715",
+					"option_num": "D",
+					"content": "现在的发布系统有publish, dcs, dce, jenkins",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688733",
+			"subject": "内网测试环境zk的地址是？",
+			"type": "multiple",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756443,
+			"hasattach": 0,
+			"answer": "B,D",
+			"score": 2.5,
+			"options": [{
+					"id": "22076708",
+					"option_num": "A",
+					"content": "zk.haimaiche.net",
+					"attach_url": ""
+				},
+				{
+					"id": "22076709",
+					"option_num": "B",
+					"content": "zk.haimaiche.net:2181",
+					"attach_url": ""
+				},
+				{
+					"id": "22076710",
+					"option_num": "C",
+					"content": "zk.haimaiche.net:8080",
+					"attach_url": ""
+				},
+				{
+					"id": "22076711",
+					"option_num": "D",
+					"content": "172.21.10.42:2181",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688734",
+			"subject": "代码开发过程中，讲究的效率，而不应该把大部分时间花在代码规范上。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510422",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510423",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688735",
+			"subject": "遵循统一代码规范有利于一个团队高效协作。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510420",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510421",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688736",
+			"subject": "开发同学不需要写单元测试，测试的工作应该由测试同学承接。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510418",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510419",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688737",
+			"subject": "README.md文件内容包括：项目说明、功能介绍、Owner相关说明信息。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510416",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510417",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688738",
+			"subject": "卖好车新项目结构为了让开发同学更关注单元测试的重要性，把单元测试独立成一个test模块，命名为项目名-test。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756441,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510414",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510415",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688739",
+			"subject": "不允许开发删除release包",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510412",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510413",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688740",
+			"subject": "允许开发随意删除snapshot包",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510410",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510411",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688741",
+			"subject": "不用管在二方包或三方包依赖过程中明显存在的依赖包版本冲突问题",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510408",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510409",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688742",
+			"subject": "如果A依赖B，B依赖C，那么A也会依赖C",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510406",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510407",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688743",
+			"subject": "maven的编译依赖范围对全部classpath都有效",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510404",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510405",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688744",
+			"subject": "maven依赖调节的规则是路径最近者优先，第一声明者优先",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510402",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510403",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688745",
+			"subject": "排除依赖的标签是<dependency>",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510400",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510401",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688746",
+			"subject": "maven解析release版本的时候如果本地有会直接使用本地的，没有就向远程仓库请求。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510398",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510399",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688747",
+			"subject": "maven的部署远程仓库的命令是install",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756444,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510396",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510397",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688748",
+			"subject": "更新字段时，可以先从数据库中获取该纪录，然后把需要更新的字段替换掉，再把该记录中所有字段保存到数据库即可，这种方法简单、方便，是值得推荐的。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510394",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510395",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688749",
+			"subject": "尽量少使用 IN 子查询、JOIN 级联查询，推荐分别根据索引单表取数据，然后在程序里面做join，merge数据。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510392",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510393",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688750",
+			"subject": "为了保证数据的一致性，推荐将@Transactional注解加在业务的顶级方法上，如加在下单的最外层的方法上。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510390",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510391",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688751",
+			"subject": "防止因字段类型不同造成的隐式转换，导致索引失效",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510388",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510389",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688752",
+			"subject": "IN 操作能避免则避免，若实在避免不了，需要仔细评估in后边的集合元素数量，控制在1000个之内。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510386",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510387",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688753",
+			"subject": "应业务人员数据分析的紧急需求，可以不经过BI，直接从DMS导出数据",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510384",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510385",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688754",
+			"subject": "为了方便测试，拿真实的数据测试，可以从测试、开发环境直连线上数据库",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756445,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510382",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510383",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688755",
+			"subject": "在目前互联网公司中，大都采用了redis作为缓存数据库，得到各位大佬青睐原因是redis速度快，因为数据存在内存中，查找和操作的时间复杂度都是O(1)；",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510380",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510381",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688756",
+			"subject": "redis中的事务操作都是原子性，所谓的原子性就是对数据的更改要么全部执行，要么全部不执行；",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "-1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510378",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510379",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688757",
+			"subject": "redis使用单线程完成了不俗的性能，是因为它使用了Reactor模式开发了自己的网络事件处理器：",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510376",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510377",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688758",
+			"subject": "当client访问某一个key，redis会check key是否过期，如果已经过期，则被删除，该种清除方式为被动清除；",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510374",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510375",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688759",
+			"subject": "Master写内存快照，save命令调度rdbSave函数，会阻塞主线程的工作，当快照比较大时对性能影响是非常大的，会间断性暂停服务，所以Master最好不要写内存快照。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510372",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510373",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688760",
+			"subject": "当前已用内存超过maxmemory限定时，会触发主动清理策略，默认的清除策略是volatile-lru；",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510370",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510371",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		},
+		{
+			"id": "18688761",
+			"subject": "Redis Cluster中共有16384个hash slot，Redis会计算每个key的CRC16，将结果与16384取模，来决定该key存储在哪一个hash slot中，同时需要指定Redis Cluster中每个数据分片负责的Slot数。",
+			"type": "judge",
+			"attachs": [
+
+			],
+			"knowledge_id": 3756446,
+			"hasattach": 0,
+			"answer": "1",
+			"score": 2.5,
+			"options": [{
+					"id": "8510368",
+					"option_value": "1",
+					"content": "对",
+					"attach_url": ""
+				},
+				{
+					"id": "8510369",
+					"option_value": "-1",
+					"content": "错",
+					"attach_url": ""
+				}
+			]
+		}
+	]
+}
