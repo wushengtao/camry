@@ -9,7 +9,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-@MapperScan("com.lunzi.camry.mapper")
+@MapperScan("com.lunzi.camry.*")
 @EnablePrometheusEndpoint
 @EnableSpringBootMetricsCollector
 public class CamryApplication {

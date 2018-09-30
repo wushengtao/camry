@@ -6,8 +6,7 @@ import com.lunzi.camry.listen.MyEvent;
 import com.lunzi.camry.listen.MyPublisher;
 import com.lunzi.camry.spring.SpringContextUtil;
 import com.lunzi.camry.spring.TestMethod;
-import org.apache.commons.configuration.beanutils.DefaultBeanFactory;
-import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

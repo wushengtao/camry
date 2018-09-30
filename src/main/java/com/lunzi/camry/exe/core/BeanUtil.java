@@ -1,4 +1,4 @@
-package com.lunzi.camry.exe.core.bean;
+package com.lunzi.camry.exe.core;
 
 import java.lang.reflect.Method;
 

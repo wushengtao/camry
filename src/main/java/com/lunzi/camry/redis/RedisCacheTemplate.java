@@ -92,28 +92,60 @@ public class RedisCacheTemplate<K,V> {
      * @return
      */
     public boolean getDistributedLock(String key, int lockSeconds) {
-        Long nowTime = System.currentTimeMillis();//当前时间
-        Long expiredTime = nowTime + lockSeconds * 1000;
-        Jedis jedis = null;
-        try {
-            jedis = getJedis();
-            //尝试获取锁
-            long setNxResult = jedis.setnx(key, String.valueOf(expiredTime));
-            if (setNxResult == 1) {
-                //获取成功 设置超时时间
-                System.out.println("设置超时时间");
-                jedis.expire(key, lockSeconds);
+        long now=System.currentTimeMillis();//当前时间
+        long expireTime=now+lockSeconds*1000;
+        //获取锁
+        Jedis jedis=getJedis();
+        Long setnxResult=jedis.setnx(key,String.valueOf(expireTime));
+        try{
+            //获取成功
+            if(setnxResult==1){
+                jedis.expire(key,lockSeconds);
                 return true;
             }
-            //获取失败，说明存在锁，get一次
-            return false;
+            //获取失败
+            String oldValue=jedis.get(key);
+            if(oldValue==null){
+                //重新设置
+                if(jedis.setnx(key,String.valueOf(expireTime))==0){
+                    return false;
+                }
+                jedis.expire(key,lockSeconds);
+                return true;
+            }
+            //判断是否超期
+            if(Long.parseLong(oldValue)>=now){
+                //没有超期
+                return false;
 
+            }
+            //已经超时了
+            oldValue=jedis.getSet(key,String.valueOf(expireTime));
+            if(oldValue!=null&&Long.parseLong(oldValue)>=now){
+                return false;
+            }
+            jedis.expire(key,lockSeconds);
+            return true;
         }finally {
-            if (jedis!=null){
+           if(jedis!=null){
+               jedis.close();
+           }
+        }
+    }
+    public boolean getDistributedLockV2(String lockName,String requestId,int expireTime){
+        Jedis jedis=getJedis();
+        try{
+            //NX setnx PX毫秒 EX秒
+            String nxResult=jedis.set(lockName,requestId,"NX","EX",expireTime);
+            if("OK".equals(nxResult)){
+                return true;
+            }
+            return false;
+        }finally {
+            if(jedis!=null){
                 jedis.close();
             }
         }
-
 
     }
 

@@ -2,10 +2,7 @@ package com.lunzi.camry.controller;
 
 import com.google.gson.Gson;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.Map;
 
@@ -20,6 +17,12 @@ public class TestController {
         System.out.println(new Gson().toJson(map));
         return "";
     }
+    @GetMapping(value = "/testNginx")
+    @ResponseBody
+    public String testNginx(String name){
+        return name;
+    }
+
 
 
 }
