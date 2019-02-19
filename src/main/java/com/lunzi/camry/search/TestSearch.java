@@ -26,17 +26,20 @@ import java.net.InetAddress;
 import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Collections;
+import java.util.concurrent.Executor;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 /**
  * Created by lunzi on 2018/9/20 下午3:18
  */
 @Slf4j
 public class TestSearch {
-    private static String hostName="172.21.10.61";
+    private static String hostName="localhost";
     private static Client getClient() throws UnknownHostException {
-        Settings settings=Settings.builder().put("cluster.name","bigtoy-infiniti").build();
+        Settings settings=Settings.builder().put("cluster.name","es-cluster").build();
         TransportClient client = new PreBuiltTransportClient(settings)
-                .addTransportAddress(new TransportAddress(InetAddress.getByName(hostName), 8989));
+                .addTransportAddress(new TransportAddress(InetAddress.getByName(hostName), 9188));
 //                .addTransportAddress(new TransportAddress(InetAddress.getByName(hostName), 9301));
         return client;
     }
@@ -71,6 +74,14 @@ public class TestSearch {
 
     }
     public static void main(String args[]) throws UnknownHostException {
-        query();
+        queryBy();
+//        ExecutorService executorService= Executors.newFixedThreadPool(2);
+//        Thread thread=new Thread(new Runnable() {
+//            @Override
+//            public void run() {
+//                System.out.println("123");
+//            }
+//        });
+//        executorService.execute(thread);
     }
 }

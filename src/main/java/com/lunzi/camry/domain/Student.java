@@ -9,14 +9,14 @@ import java.io.Serializable;
  * Created by lunzi on 2018/6/5 下午10:33
  */
 @Data
-@Component
 public class Student implements Serializable {
     private String name;
+    private Integer age;
 
     //---------------构造方法-------------------
     //（默认的构造方法）
-    Student(String str){
-        System.out.println("(默认)的构造方法 s = " + str);
+    public Student(String name){
+        this.name=name;
     }
 
     //无参构造方法
@@ -24,14 +24,9 @@ public class Student implements Serializable {
         System.out.println("调用了公有、无参构造方法执行了。。。");
     }
 
-    //有一个参数的构造方法
-    public Student(char name){
-        System.out.println("姓名：" + name);
-    }
-
-    //有多个参数的构造方法
-    public Student(String name ,int age){
-        System.out.println("姓名："+name+"年龄："+ age);//这的执行效率有问题，以后解决。
+    public Student(String name, Integer age) {
+        this.name = name;
+        this.age = age;
     }
 
     //受保护的构造方法

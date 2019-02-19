@@ -14,6 +14,6 @@ import java.util.List;
  * @since 2018-06-02
  */
 public interface DicService extends IService<Dic> {
-    List<Dic> selectByPrimaryKeyForUpdate(String keyCode);
+    List<Dic> selectByPrimaryKeyForUpdate(String keyCode) throws Exception;
 
 }
