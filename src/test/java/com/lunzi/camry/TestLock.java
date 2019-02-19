@@ -27,6 +27,7 @@ import java.sql.SQLException;
 import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.*;
 
 /**
  * Created by lunzi on 2018/9/12 上午11:27
@@ -74,10 +75,38 @@ public class TestLock {
 
     }
     @Test
-    public void insert(){
+    public void insert() throws InterruptedException {
         Long start=System.currentTimeMillis();
-        testFuture.updateALL();
+        testFuture.updateBatchAll();
         Long end=System.currentTimeMillis();
         System.out.println(end-start);
+        Thread.sleep(1000);
+    }
+    @Test
+    public void testall() throws InterruptedException {
+        testFuture.updateALL();
+    }
+    @Test
+    public void testFuture() throws ExecutionException, InterruptedException{
+        ExecutorService es= Executors.newFixedThreadPool(5);
+        Future future=es.submit(new EasyFeture());
+        try{
+            future.get(3000,TimeUnit.MILLISECONDS);
+        }catch (Exception e) {
+            System.out.println("超时了");
+        }
+
+        System.out.println("main stop");
+    }
+    class EasyFeture implements Callable<String> {
+
+        @Override
+        public String call() throws Exception {
+            System.out.println("start");
+            Thread.sleep(5000);
+            System.out.println("end");
+            return "success";
+
+        }
     }
 }

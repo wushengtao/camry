@@ -9,50 +9,44 @@ import java.util.List;
 
 /**
  * 快速排序
+ * 平均O(nlog2n) 最好O(nlog2n) 最坏O(n2)
  * Created by lunzi on 2018/7/7 下午3:27
  */
-public class QuickSort {
-    //快速排序
-    public static void quickSort(int low,int high,int [] nums){
-        if(low>=high){
-            return;
+public class QuickSort implements SortMethod {
+    @Override
+    public int[] sort(int[] sortArray) {
+        return quickSort(sortArray,0,sortArray.length-1);
+    }
+
+    private int [] quickSort(int sortArray[], int left, int right) {
+        if(left>=right){
+            return sortArray;
         }
-        int left=low;
-        int right=high;
-        int index=left;
-        int temp;
-        //i和j相遇
-        while(left<right){
-            //哨兵在左边,从右边开始找
-            while(nums[right]>=nums[index]&&right>left){
+        //最左边的数作为第一个基数
+        int index = left;//左边的指针
+        int temp = 0;
+        //从右边开始进行遍历
+        while (left < right) {
+            while (sortArray[right] >= sortArray[left] && left < right) {
                 right--;
             }
-
-            //然后从左边开始找
-            while(nums[left]<=nums[index]&&left<right){
+            while (sortArray[left] < -sortArray[left] && left < right) {
                 left++;
             }
-            //交换一下位置
-            temp=nums[left];
-            nums[left]=nums[right];
-            nums[right]=temp;
+            //交换两个数字的位置
+            temp = sortArray[left];
+            sortArray[left] = sortArray[right];
+            sortArray[right] = temp;
         }
-        //交换相遇点和哨兵
-        temp=nums[index];
-        nums[index]=nums[left];
-        nums[left]=temp;
+        //交换基数值和相遇值
+        temp = sortArray[index];
+        sortArray[index] = sortArray[left];
+        sortArray[left] = temp;
 
-        index=left;
-        quickSort(low,index-1,nums);//左边
-        quickSort(index+1,high,nums);//左边
-
-    }
-    public static void main(String args[]){
-//        int [] array={3,4,5,7,9,1,2,2,2,4,6,7,1,2};
-//        quickSort(0,array.length-1,array);
-//        System.out.println(Arrays.toString(array));
-        List<Integer> list= Lists.newArrayList(1,2,2,2,3,3,3);
-        HashSet<Integer> hashSet= Sets.newHashSet(list);
-        System.out.println(hashSet.toString());
+        //左边排序
+        index = left;
+        quickSort(sortArray, 0, index - 1);
+        quickSort(sortArray, index + 1, right);
+        return sortArray;
     }
 }

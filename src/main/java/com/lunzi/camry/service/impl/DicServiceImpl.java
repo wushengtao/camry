@@ -24,7 +24,7 @@ public class DicServiceImpl extends ServiceImpl<DicDao, Dic> implements DicServi
     DicDao dicDao;
 
     @Override
-    public List<Dic> selectByPrimaryKeyForUpdate(String keyCode) {
+    public List<Dic> selectByPrimaryKeyForUpdate(String keyCode) throws Exception{
         return dicDao.selectByPrimaryKeyForUpdate(keyCode);
     }
 }
