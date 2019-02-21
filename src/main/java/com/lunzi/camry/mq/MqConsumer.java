@@ -63,7 +63,7 @@ public class MqConsumer {
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
-                return ConsumeOrderlyStatus.SUCCESS;
+                throw new RuntimeException("重试");
 
             });
             consumer.start();
