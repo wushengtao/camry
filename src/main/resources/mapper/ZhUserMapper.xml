@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.lunzi.camry.mapper.ZhUserDao">
+
+    <insert id="batchInsert" useGeneratedKeys="true">
+        insert into zh_user(user_token,location,business,sex,employment,education
+        ,username,url,agrees,thanks,asks,answers,posts,followees,followers,
+        hash_id,created_time,updated_time,position)
+        values
+        <foreach collection="list" item="user" index="index" separator=",">
+            (#{user.userToken},#{user.location},#{user.business},#{user.sex},#{user.employment},#{user.education},
+            #{user.username},#{user.url},#{user.agrees},#{user.thanks},#{user.asks},
+            #{user.answers},#{user.posts}, #{user.followees},#{user.followers},#{user.hashId},now(),
+            now(),#{user.position})
+        </foreach>
+    </insert>
+</mapper>
