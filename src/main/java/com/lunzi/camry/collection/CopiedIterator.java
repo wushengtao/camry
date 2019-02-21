@@ -1,6 +1,5 @@
 package com.lunzi.camry.collection;
 
-import com.lunzi.camry.cache.iml.CacheObj;
 
 import javax.swing.undo.UndoableEditSupport;
 import java.util.Iterator;
