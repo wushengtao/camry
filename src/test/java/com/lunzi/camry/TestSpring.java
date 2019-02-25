@@ -2,8 +2,6 @@ package com.lunzi.camry;
 
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.Student;
-import com.lunzi.camry.listen.MyEvent;
-import com.lunzi.camry.listen.MyPublisher;
 import com.lunzi.camry.spring.SpringContextUtil;
 import com.lunzi.camry.spring.TestMethod;
 
@@ -43,12 +41,7 @@ public class TestSpring {
         Object dic=applicationContext.getBean(clazz);
 
     }
-    @Test
-    public void testListen(){
-        ApplicationContext applicationContext=SpringContextUtil.getApplicationContext();
-        MyPublisher myPublisher= (MyPublisher) applicationContext.getBean("myPublisher");
-        myPublisher.publishEvent(new MyEvent("1"));
-    }
+
     @Test
     public void testAop(){
         Class clazz=Student.class;
