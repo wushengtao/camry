@@ -4,6 +4,7 @@ import com.google.gson.Gson;
 import com.lunzi.camry.ao.ExeAO;
 import com.lunzi.camry.bean.BizResult;
 import com.lunzi.camry.controller.form.UserForm;
+import com.lunzi.camry.domain.Student;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -21,48 +22,54 @@ import java.util.Map;
 public class TestController {
     @Autowired
     private ExeAO exeAO;
-    @RequestMapping(value = "testMap",method = RequestMethod.POST)
+
+    @RequestMapping(value = "testMap", method = RequestMethod.POST)
     @ResponseBody
-    public String test(@RequestParam Map<String,String> map){
+    public String test(@RequestParam Map<String, String> map) {
         System.out.println(new Gson().toJson(map));
         return "";
     }
-    @GetMapping(value = "/testNginx")
+
+    @RequestMapping(value = "/testNginx")
     @ResponseBody
-    public String testNginx(String name){
+    public String testNginx(String name) throws InterruptedException {
         return "testNginx";
     }
+
     @RequestMapping(value = "/hello")
-    public String testHelo(){
+    public String testHelo() {
         return "hello";
     }
+
     @RequestMapping(value = "/pic")
-    public String testPic(){
+    public String testPic() {
         return "pic";
     }
+
     /**
      * 上传图片
      */
-    @PostMapping(value = "/upload",consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+    @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
     @ResponseBody
-    public String uploadFile(@RequestParam("file")MultipartFile file){
+    public String uploadFile(@RequestParam("file") MultipartFile file) {
         return "success";
 
     }
+
     /**
      * 测试并发
      */
     @ResponseBody
     @RequestMapping(value = "/testMysql")
-    public String testMysql(){
+    public String testMysql() {
         exeAO.testUpdate();
         return "sucess";
     }
 
     @ResponseBody
     @RequestMapping(value = "/testAspect")
-    public String testAspect(@Valid @RequestBody UserForm form, BindingResult bindingResult){
-        if(bindingResult.hasErrors()){
+    public String testAspect(@Valid @RequestBody UserForm form, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
             System.out.println("has errors");
         }
         return "sucess";
@@ -70,17 +77,23 @@ public class TestController {
 
     @ResponseBody
     @RequestMapping(value = "testUrl")
-    public String testUrl(@ModelAttribute UserForm form){
+    public String testUrl(@ModelAttribute UserForm form) {
         System.out.println(form.getUserName());
         return "success";
     }
 
     @ResponseBody
     @RequestMapping(value = "testException")
-    public BizResult testException(@Valid UserForm userForm,BindingResult bindingResult){
-        BizResult<Boolean> bizResult=BizResult.create(9999,"NO_DATA");
+    public BizResult testException(@Valid UserForm userForm, BindingResult bindingResult) {
+        BizResult<Boolean> bizResult = BizResult.create(9999, "NO_DATA");
         throw new RuntimeException("test");
-       // return bizResult;
+        // return bizResult;
+    }
+
+    @RequestMapping(value = "/qqq")
+    @ResponseBody
+    public String testQQQ() {
+        return "111";
     }
 
 }

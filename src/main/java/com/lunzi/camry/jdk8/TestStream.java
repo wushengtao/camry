@@ -1,6 +1,9 @@
 package com.lunzi.camry.jdk8;
 
 
+import com.google.common.collect.Lists;
+
+import java.util.List;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -42,6 +45,13 @@ public class TestStream {
         streams.skip(1);
     }
 
+    //flapMap
+    public static void test5(){
+        Stream<List<Integer>> stream=Stream.of(Lists.newArrayList(1,2),Lists.newArrayList(3,4));
+        Stream<Integer> stream1=stream.flatMap(u->u.stream());
+        stream1.forEach(System.out::println);
+    }
+
 
     public static void test3(){
         Stream<Integer> streams = Stream.of(1, 2, 3, 4);
@@ -70,6 +80,6 @@ public class TestStream {
     }
 
     public static void main(String[] args) {
-
+        test5();
     }
 }
