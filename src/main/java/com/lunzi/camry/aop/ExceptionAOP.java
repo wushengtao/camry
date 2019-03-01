@@ -22,7 +22,7 @@ import java.util.List;
 @Component
 @Slf4j
 public class ExceptionAOP {
-    @Around(value = "execution(public * com.lunzi.camry.controller..*.*(..))")
+    //@Around(value = "execution(public * com.lunzi.camry.controller..*.*(..))")
     public Object aopMethod(ProceedingJoinPoint proceedingJoinPoint) {
         return processMedthod(proceedingJoinPoint);
     }
