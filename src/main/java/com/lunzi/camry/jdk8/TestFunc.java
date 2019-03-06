@@ -23,6 +23,6 @@ public class TestFunc {
     }
 
     public static void dowork(){
-        System.out.println("123444");
+        //System.out.println("123444");
     }
 }
