@@ -3,7 +3,6 @@ package com.lunzi.camry;
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.Student;
 import com.lunzi.camry.spring.SpringContextUtil;
-import com.lunzi.camry.spring.TestMethod;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -27,8 +26,6 @@ import javax.swing.*;
 @RunWith(SpringRunner.class)
 public class TestSpring {
 
-    @Autowired
-    private TestMethod testMethod;
     @Test
     public void test(){
         Class clazz=Dic.class;

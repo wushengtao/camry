@@ -58,13 +58,7 @@ public class MqConsumer {
                     }
                     System.out.println("消费响应：msgId : " + messageExt.getMsgId() + ",  msgBody : " + messageBody);//输出消息内容
                 }
-                try {
-                    Thread.sleep(2000);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-                throw new RuntimeException("重试");
-
+                return ConsumeOrderlyStatus.SUCCESS;
             });
             consumer.start();
         } catch (MQClientException e) {
