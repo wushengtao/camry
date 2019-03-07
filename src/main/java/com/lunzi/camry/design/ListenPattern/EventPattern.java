@@ -1,5 +1,7 @@
 package com.lunzi.camry.design.ListenPattern;
 
+import java.awt.*;
+
 /**
  * Created by lunzi on 2019/3/6 9:38 AM
  */
@@ -13,5 +15,6 @@ public class EventPattern {
             }
         });
         eventSource.eventHappent();
+        Button button=new Button();
     }
 }
