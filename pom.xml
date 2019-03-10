@@ -222,7 +222,7 @@
         </dependency>
         <dependency>
             <groupId>com.lunzi</groupId>
-            <artifactId>bicycle</artifactId>
+            <artifactId>simple-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
         <dependency>

@@ -59,6 +59,11 @@ demo:
   user:
     userName: wst
     userAge: 12
+example:
+  service:
+    enabled: true
+
+
 
 
 
