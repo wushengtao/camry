@@ -221,11 +221,6 @@
             <version>[7.2.0, 7.2.99]</version>
         </dependency>
         <dependency>
-            <groupId>com.lunzi</groupId>
-            <artifactId>simple-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
-        <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.54</version>

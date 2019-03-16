@@ -4,8 +4,6 @@ import com.google.gson.Gson;
 import com.lunzi.camry.ao.ExeAO;
 import com.lunzi.camry.bean.BizResult;
 import com.lunzi.camry.controller.form.UserForm;
-import com.lunzi.camry.domain.Student;
-import com.lunzi.simple.starter.service.StarterService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -23,8 +21,7 @@ import java.util.Map;
 public class TestController {
     @Autowired
     private ExeAO exeAO;
-    @Autowired
-    StarterService starterService;
+
 
     @RequestMapping(value = "testMap", method = RequestMethod.POST)
     @ResponseBody

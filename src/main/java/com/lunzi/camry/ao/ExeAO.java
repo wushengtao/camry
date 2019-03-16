@@ -6,4 +6,6 @@ package com.lunzi.camry.ao;
 public interface ExeAO {
     public void testUpdate();
 
+    public void testAu();
+
 }

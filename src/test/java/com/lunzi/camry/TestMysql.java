@@ -51,6 +51,16 @@ public class TestMysql {
     }
 
     @Test
+    public void testQuery(){
+        EntityWrapper<ZhUser> wrapper=new EntityWrapper();
+        ZhUser zhUser=new ZhUser();
+        zhUser.setUserToken("wo-yan-chen-mo");
+        wrapper.setEntity(zhUser);
+        wrapper.eq("user_token","test");
+        List<ZhUser> zhUserList=zhUserDao.selectList(wrapper);
+        System.out.println(zhUserList);
+    }
+    @Test
     public void mulTest() {
         long start = System.currentTimeMillis();
         ExecutorService executorService = new ThreadPoolExecutor(50, 50, 6000, TimeUnit.MILLISECONDS,

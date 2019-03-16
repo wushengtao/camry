@@ -2,11 +2,14 @@ package com.lunzi.camry;
 
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.Student;
+import com.lunzi.camry.domain.User;
 import com.lunzi.camry.spring.SpringContextUtil;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.config.BeanDefinition;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
@@ -18,6 +21,8 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import javax.swing.*;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by lunzi on 2018/7/22 下午5:12
@@ -54,6 +59,20 @@ public class TestSpring {
         XmlBeanDefinitionReader definitionReader=new XmlBeanDefinitionReader(defaultBeanFactory);
         definitionReader.loadBeanDefinitions(classPathResource);
     }
+
+    @Test
+    public void test4(){
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("applicationContext.xml");
+        ConfigurableListableBeanFactory configurableListableBeanFactory=((ClassPathXmlApplicationContext) applicationContext).getBeanFactory();
+        BeanDefinitionBuilder beanDefinitionBuilder=BeanDefinitionBuilder.genericBeanDefinition(Student.class);
+        //User user=(User)applicationContext.getBean("user");
+       // System.out.println(user.hashCode());
+    }
+    @Test
+    public void test5(){
+        User user=new User();
+    }
+
 
 
 }

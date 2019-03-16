@@ -8,7 +8,6 @@ import java.io.Serializable;
 /**
  * Created by lunzi on 2018/6/5 下午10:33
  */
-@Data
 public class Student implements Serializable {
     private String name;
     private Integer age;
@@ -21,7 +20,7 @@ public class Student implements Serializable {
 
     //无参构造方法
     public Student(){
-        System.out.println("调用了公有、无参构造方法执行了。。。");
+       // System.out.println("调用了公有、无参构造方法执行了。。。");
     }
 
     public Student(String name, Integer age) {
@@ -39,5 +38,19 @@ public class Student implements Serializable {
         System.out.println("私有的构造方法   年龄："+ age);
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Integer getAge() {
+        return age;
+    }
+
+    public void setAge(Integer age) {
+        this.age = age;
+    }
 }

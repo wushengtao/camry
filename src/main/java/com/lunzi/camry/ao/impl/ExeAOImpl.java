@@ -7,6 +7,7 @@ import com.lunzi.camry.ao.ExeAO;
 import com.lunzi.camry.domain.Exe;
 import com.lunzi.camry.mapper.ExeDao;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,6 +39,11 @@ public class ExeAOImpl  implements ExeAO {
             System.out.println("成功更新了"+i+"条数据");
         }
         System.out.println(num);
+    }
+
+    @Override
+    public void testAu() {
+        System.out.println("this is a test");
     }
 
 }
