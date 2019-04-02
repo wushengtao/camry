@@ -1,6 +1,8 @@
 package com.lunzi.camry;
 
 import com.lunzi.camry.redis.RedisLock;
+import com.lunzi.camry.service.TestService;
+import com.mhc.framework.support.lock.DistributedLock;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,17 +17,23 @@ import java.util.concurrent.CountDownLatch;
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class TestRedis {
+    @Autowired
+    private DistributedLock distributedLock;
+    @Autowired
+    private TestService testService;
     @Test
     public void testGetLock() throws InterruptedException {
-        CountDownLatch latch=new CountDownLatch(10);
-       for(int i=0;i<10;i++){
-           Thread thread=new Thread(()->{
-               RedisLock.tryLcok("lock","wushengtao",1);
-           });
-           thread.start();
-           latch.countDown();
-       }
-       latch.await();
+//        Boolean result=distributedLock.lock("dislock",300000,5,50);
+//        if(result){
+//            System.out.println("加锁成功");
+//        }else {
+//            System.out.println("加锁失败");
+//        }
+
+    }
+    @Test
+    public void testLockAnnotation(){
+        testService.lock();
     }
 
 }

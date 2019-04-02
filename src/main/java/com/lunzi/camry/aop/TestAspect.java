@@ -10,8 +10,9 @@ import org.springframework.stereotype.Component;
 /**
  * Created by lunzi on 2018/10/8 下午4:29
  */
-@Aspect
+
 @Component
+@Aspect
 public class TestAspect {
     @Pointcut("@annotation(com.lunzi.camry.aop.RecordLog)")
     public void log(){

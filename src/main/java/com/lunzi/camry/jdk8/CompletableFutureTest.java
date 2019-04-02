@@ -1,10 +1,16 @@
 package com.lunzi.camry.jdk8;
 
+import com.google.common.collect.Lists;
+import com.google.common.collect.Maps;
+
+import java.util.List;
+import java.util.Map;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 import java.util.function.Function;
+import java.util.stream.Collectors;
 
 /**
  * Created by lunzi on 2019/2/28 4:35 PM
@@ -63,6 +69,33 @@ public class CompletableFutureTest {
         return completableFuture;
     }
 
+    public static void testAllof() throws ExecutionException, InterruptedException {
+        CompletableFuture future1=CompletableFuture.supplyAsync(()->{
+            System.out.println("1231231");
+            return null;
+        });
+        List<Integer> list= Lists.newArrayList();
+        list=null;
+        list.stream().map(Integer::intValue).collect(Collectors.toList());
+        //CompletableFuture.allOf(future1).join();
+
+    }
     public static void main(String[] args) throws ExecutionException, InterruptedException {
+        CompletableFuture future=CompletableFuture.supplyAsync(()->{
+            System.out.println("task1。。。。。");
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return null;
+        });
+        future.whenComplete((result,excecption)->{
+            System.out.println("finish..");
+        });
+        while(true){
+            Thread.sleep(1000);
+            System.out.println("other task");
+        }
     }
 }

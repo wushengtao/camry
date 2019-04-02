@@ -6,4 +6,5 @@ package com.lunzi.camry.service;
 public interface TestService {
     public void add();
     public String testBiz();
+    public String lock();
 }

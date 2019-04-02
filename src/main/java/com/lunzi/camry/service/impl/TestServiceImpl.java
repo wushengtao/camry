@@ -2,6 +2,8 @@ package com.lunzi.camry.service.impl;
 
 import com.lunzi.camry.annotation.BizResultAdvice;
 import com.lunzi.camry.service.TestService;
+
+import com.mhc.framework.support.lock.annotations.DisLock;
 import org.springframework.stereotype.Component;
 
 /**
@@ -18,5 +20,12 @@ public class TestServiceImpl implements TestService {
     @BizResultAdvice
     public String testBiz() {
         return "test Biz";
+    }
+
+    @Override
+    @DisLock(key="test")
+    public String lock() {
+        System.out.println("加锁");
+        return "success";
     }
 }

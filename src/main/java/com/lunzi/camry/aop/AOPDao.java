@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AOPDao {
     @RecordLog
-    public void print(){
+    public void  print(){
         System.out.println("this is print Method");
     }
 }
