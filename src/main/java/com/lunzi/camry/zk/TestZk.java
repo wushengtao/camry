@@ -54,6 +54,7 @@ public class TestZk {
         }finally {
             try {
                 mutex.release();
+                System.out.println("释放了锁");
             } catch (Exception e) {
                 e.printStackTrace();
             }

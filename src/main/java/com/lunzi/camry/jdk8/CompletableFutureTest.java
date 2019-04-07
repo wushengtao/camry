@@ -80,22 +80,43 @@ public class CompletableFutureTest {
         //CompletableFuture.allOf(future1).join();
 
     }
-    public static void main(String[] args) throws ExecutionException, InterruptedException {
-        CompletableFuture future=CompletableFuture.supplyAsync(()->{
-            System.out.println("task1。。。。。");
+
+    public static void testMultFutureTime() throws ExecutionException, InterruptedException {
+        Long start=System.currentTimeMillis();
+        //模拟五个任务
+        CompletableFuture c1=CompletableFuture.supplyAsync(()->{
             try {
-                Thread.sleep(5000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            return null;
+            return 1;
         });
-        future.whenComplete((result,excecption)->{
-            System.out.println("finish..");
+        CompletableFuture c2=CompletableFuture.supplyAsync(()->{
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return 2;
         });
-        while(true){
-            Thread.sleep(1000);
-            System.out.println("other task");
-        }
+        CompletableFuture c3=CompletableFuture.supplyAsync(()->{
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            return 3;
+        });
+        //阻塞在这里等待所有的任务都完成
+        CompletableFuture.anyOf(c1,c2,c3).join();
+        Integer num1= (Integer) c1.get();
+        Integer num2= (Integer) c2.get();
+        Integer num3= (Integer) c3.get();
+        long end=System.currentTimeMillis();
+        System.out.println((end-start));
+    }
+    public static void main(String[] args) throws ExecutionException, InterruptedException {
+        CompletableFutureTest.testMultFutureTime();
     }
 }
