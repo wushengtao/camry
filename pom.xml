@@ -32,6 +32,12 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>jedis</artifactId>
+                    <groupId>redis.clients</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -226,17 +232,25 @@
             <version>1.2.54</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.mhc.framework</groupId>
-            <artifactId>framework-support-lock</artifactId>
-            <version>1.2.1.RELEASE</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.mhc.framework</groupId>-->
+            <!--<artifactId>framework-support-lock</artifactId>-->
+            <!--<version>1.2.1.RELEASE</version>-->
+        <!--</dependency>-->
 
         <dependency>
             <groupId>org.apache.curator</groupId>
             <artifactId>curator-framework</artifactId>
             <version>2.13.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.lunzi</groupId>
+            <artifactId>simple-starter</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+
+
 
 
     </dependencies>
