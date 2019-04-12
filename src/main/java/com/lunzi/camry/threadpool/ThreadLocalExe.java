@@ -9,27 +9,27 @@ import java.util.concurrent.CountDownLatch;
  * Created by lunzi on 2019/3/12 11:42 AM
  */
 public class ThreadLocalExe {
-    private static ThreadLocal<User> threadLocal = ThreadLocal.withInitial(() -> {
-        User user = new User();
-        user.setUserId(1L);
-        return user;
-    });
-
-    public static void main(String[] args) throws InterruptedException {
-        CountDownLatch countDownLatch = new CountDownLatch(1);
-        for (int i = 0; i < 1; i++) {
-            Thread thread = new Thread(new Runnable() {
-                @Override
-                public void run() {
-                    User user = threadLocal.get();
-                    user.setUserId(2L);
-                    threadLocal.set(user);
-                    countDownLatch.countDown();
-                }
-            });
-            thread.start();
+    public static void main(String[] args) {
+        MyThread1 mt = new MyThread1();
+        Thread t1 = new Thread(mt);
+        Thread t2 = new Thread(mt);
+        t1.start();
+        t2.start();
+    }
+}
+class MyThread1 implements Runnable {
+    public int ticket = 10;
+    @Override
+    public void run() {
+        for (int i = 0; i < 10; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            if (this.ticket > 0) {
+                System.out.println(Thread.currentThread().getName() + " 卖票：ticket" + this.ticket--);
+            }
         }
-        countDownLatch.await();
-        System.out.println(threadLocal.get().getUserId());
     }
 }

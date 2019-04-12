@@ -35,6 +35,9 @@ public class TestRedis {
         CyclicBarrier cyclicBarrier=new CyclicBarrier(5);
         Thread t1=new Thread(()->{
             testService.lock();
+            testService.lock();
+            System.out.println("continune");
+            System.out.println();
             try {
                 cyclicBarrier.await();
             } catch (InterruptedException e) {
@@ -43,18 +46,18 @@ public class TestRedis {
                 e.printStackTrace();
             }
         });
-        Thread t2=new Thread(()->{
-            try {
-                testService.lock();
-                cyclicBarrier.await();
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (BrokenBarrierException e) {
-                e.printStackTrace();
-            }
-        });
+//        Thread t2=new Thread(()->{
+//            try {
+//                testService.lock();
+//                cyclicBarrier.await();
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            } catch (BrokenBarrierException e) {
+//                e.printStackTrace();
+//            }
+//        });
         t1.start();
-        t2.start();
+        //t2.start();
         cyclicBarrier.await();
     }
 

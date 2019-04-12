@@ -93,6 +93,12 @@ public class TestController {
     @RequestMapping(value = "/qqq")
     @ResponseBody
     public String testQQQ() {
+        //模拟一秒的并发
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return "111";
     }
 

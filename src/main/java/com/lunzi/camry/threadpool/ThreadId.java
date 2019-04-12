@@ -27,12 +27,25 @@ public class ThreadId {
         return threadId.get();
     }
 
-    public static void main(String[] args) {
-        List<Integer> list= Lists.newArrayList();
-        list.add(3);
-        list=list.stream().filter(num->!num.equals(3)).collect(Collectors.toList());
-        List<Integer> l=Lists.newArrayList();
-        l.addAll(list);
-        System.out.println(list);
+    public static void main(String[] args) throws InterruptedException {
+        //新建一个线程 循环
+        Thread thread = new Thread(() -> {
+            while (true) {
+                System.out.println("循环");
+                try {
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
+                }
+                if (Thread.interrupted()) {
+                    System.out.println("线程被中断了");
+                    break;
+                }
+            }
+        });
+        thread.start();
+        Thread.sleep(3000);
+        thread.interrupt();
     }
 }

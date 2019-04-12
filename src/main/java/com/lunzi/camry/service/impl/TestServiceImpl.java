@@ -3,6 +3,7 @@ package com.lunzi.camry.service.impl;
 import com.lunzi.camry.annotation.BizResultAdvice;
 import com.lunzi.camry.service.TestService;
 
+import com.lunzi.simple.starter.anno.DisLock;
 import com.lunzi.simple.starter.anno.ZkDisLock;
 import org.springframework.stereotype.Component;
 
@@ -23,7 +24,8 @@ public class TestServiceImpl implements TestService {
     }
 
     @Override
-    @ZkDisLock(value = "test")
+    //@ZkDisLock(value = "test")
+    @DisLock(key= "redisLock",keepMills = 3000)
     public String lock() {
         System.out.println("加锁,线程睡眠一会");
         try {
