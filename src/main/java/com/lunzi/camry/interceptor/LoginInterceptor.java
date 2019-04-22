@@ -1,16 +1,12 @@
-package com.lunzi.camry.web;
+package com.lunzi.camry.interceptor;
 
 import com.lunzi.camry.domain.User;
-import com.lunzi.camry.service.TestService;
 import org.apache.commons.lang3.ArrayUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
@@ -19,31 +15,14 @@ import java.util.Objects;
 import java.util.UUID;
 
 /**
- * Created by lunzi on 2019/1/30 10:12 AM
+ * Created by lunzi on 2019/4/21 9:22 PM
  */
-@RequestMapping(value = "/test")
-@Controller
-public class TestBizController {
-    @Autowired
-    TestService testService;
-
-    @ResponseBody
-    @RequestMapping(value = "/biz")
-    public String testController() {
-        return testService.testBiz();
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "/login")
-    public String login() {
-        return "登录中心";
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "/loginForm")
-    public String loginForm() {
-        //自动登录成功
-        //设置session
+@Component
+public class LoginInterceptor extends HandlerInterceptorAdapter {
+    //登录拦截
+    @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+        //检查本地的session
         //获取从cookie中获取sessionId
         String sessionId = "";
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
@@ -67,11 +46,14 @@ public class TestBizController {
             httpServletResponse.addCookie(cookie);
         }
 
-        //设置sessionId
-        User user=new User();
-        user.setUserId(1L);
-        httpServletRequest.getSession().setAttribute(sessionId,user);
+        //根据sessonId获取session
+        User user = (User) httpServletRequest.getSession().getAttribute(sessionId);
+        if(user!=null){
+            return true;
+        }
 
-        return "登录成功";
+        response.sendRedirect("/test/login");
+        return false;
     }
+
 }

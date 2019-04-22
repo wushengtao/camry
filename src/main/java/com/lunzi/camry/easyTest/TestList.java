@@ -6,6 +6,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
+import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.ReentrantLock;
 import java.util.regex.Pattern;
 
 
@@ -13,23 +15,23 @@ import java.util.regex.Pattern;
  * Created by lunzi on 2019/1/3 2:21 PM
  */
 public class TestList {
-    public static void main(String[] args) {
-        TestList testList=new TestList();
-        String str="12.222万";
-        BigDecimal bigDecimal=new BigDecimal(str.replace("万",""));
-        BigDecimal big=bigDecimal.multiply(new BigDecimal(1000000));
-        System.out.println(big.longValue());
-        String pattern = "^S[0-9]+$";
-        boolean isMatch = Pattern.matches(pattern, "S2012");
-        System.out.println(isMatch);
-        Student student=new Student();
-        student.setAge(1);
-        student.setName("123");
-        JSONObject jsonObject=JSONObject.parseObject(JSONObject.toJSON(student).toString());
-        JSONObject object=jsonObject.getJSONObject("test");
-
-        //testList.test();
-        //testList.testSort();
+    private static ReentrantLock reentrantLock=new ReentrantLock();
+    private static int count=0;
+    private static CountDownLatch countDownLatch=new CountDownLatch(1000000);
+    public static void main(String[] args) throws InterruptedException {
+        for(int i=1;i<1000000;i++){
+            new Thread(()->{
+                reentrantLock.lock();
+                count++;
+                reentrantLock.unlock();
+                try {
+                    countDownLatch.await();
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }).start();
+        }
+        countDownLatch.await();
     }
     public void test(){
         Student student=new Student("0");
