@@ -1,6 +1,7 @@
 package com.lunzi.camry.web;
 
 import com.lunzi.camry.domain.User;
+import com.lunzi.camry.mapper.ZhUserDao;
 import com.lunzi.camry.service.TestService;
 import org.apache.commons.lang3.ArrayUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -73,5 +74,16 @@ public class TestBizController {
         httpServletRequest.getSession().setAttribute(sessionId,user);
 
         return "登录成功";
+    }
+
+    /**
+     * 测试数据库连接池的数量
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/testMysqlCon")
+    public String testMysqlCOn(){
+        testService.lockCon();
+        return "success";
     }
 }

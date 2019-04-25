@@ -14,4 +14,8 @@
             now(),#{user.position})
         </foreach>
     </insert>
+
+    <select id="selectForUpdateById" resultType="com.lunzi.camry.domain.ZhUser">
+        select * from zh_user where id=1 for update
+    </select>
 </mapper>

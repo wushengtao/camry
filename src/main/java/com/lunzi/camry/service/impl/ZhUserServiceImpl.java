@@ -6,6 +6,7 @@ import com.lunzi.camry.mapper.ZhUserDao;
 import com.lunzi.camry.service.ZhUserService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 /**
  * <p>
@@ -24,5 +25,7 @@ public class ZhUserServiceImpl extends ServiceImpl<ZhUserDao, ZhUser> implements
         entityWrapper.orderBy("id",false);
         entityWrapper.last("limit 1");
         return this.selectList(entityWrapper).get(0).getId();
+
     }
+
 }

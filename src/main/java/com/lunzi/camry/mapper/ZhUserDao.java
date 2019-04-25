@@ -2,6 +2,7 @@ package com.lunzi.camry.mapper;
 
 import com.lunzi.camry.domain.ZhUser;
 import com.baomidou.mybatisplus.mapper.BaseMapper;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -17,4 +18,7 @@ public interface ZhUserDao extends BaseMapper<ZhUser> {
 
 
     Integer  batchInsert(List<ZhUser> zhUserList);
+
+
+    ZhUser selectForUpdateById();
 }

@@ -14,4 +14,7 @@ import com.baomidou.mybatisplus.service.IService;
 public interface ZhUserService extends IService<ZhUser> {
 
     int getlastId();
+
+
+
 }

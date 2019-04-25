@@ -7,4 +7,5 @@ public interface TestService {
     public void add();
     public String testBiz();
     public String lock();
+    public void lockCon();
 }
