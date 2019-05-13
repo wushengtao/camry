@@ -14,7 +14,6 @@ import java.util.concurrent.locks.LockSupport;
  * Created by lunzi on 2019/2/25 9:16 AM
  */
 public class MutiClient implements Runnable{
-    private static final long spendTime =6000000000L;
 
     @Override
     public void run() {
@@ -23,7 +22,6 @@ public class MutiClient implements Runnable{
             socket.connect(new InetSocketAddress("localhost",8888));
             BufferedWriter bufferedWriter=new BufferedWriter(new PrintWriter(socket.getOutputStream()));
             bufferedWriter.write("hello");
-            LockSupport.parkNanos(spendTime);
             bufferedWriter.flush();
             bufferedWriter.close();
             socket.close();

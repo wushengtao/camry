@@ -81,11 +81,13 @@
             <version>5.1.38</version>
         </dependency>
         <!-- alibaba的druid数据库连接池 -->
+
         <dependency>
             <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.11</version>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>1.1.10</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.apache.velocity</groupId>
@@ -155,15 +157,15 @@
             <version>1.5.6</version>
         </dependency>
         <!--<dependency>-->
-            <!--<groupId>org.apache.curator</groupId>-->
-            <!--<artifactId>curator-framework</artifactId>-->
-            <!--<version>2.12.0</version>-->
-            <!--<exclusions>-->
-                <!--<exclusion>-->
-                    <!--<artifactId>guava</artifactId>-->
-                    <!--<groupId>com.google.guava</groupId>-->
-                <!--</exclusion>-->
-            <!--</exclusions>-->
+        <!--<groupId>org.apache.curator</groupId>-->
+        <!--<artifactId>curator-framework</artifactId>-->
+        <!--<version>2.12.0</version>-->
+        <!--<exclusions>-->
+        <!--<exclusion>-->
+        <!--<artifactId>guava</artifactId>-->
+        <!--<groupId>com.google.guava</groupId>-->
+        <!--</exclusion>-->
+        <!--</exclusions>-->
         <!--</dependency>-->
         <dependency>
             <groupId>org.apache.curator</groupId>
@@ -233,9 +235,9 @@
         </dependency>
 
         <!--<dependency>-->
-            <!--<groupId>com.mhc.framework</groupId>-->
-            <!--<artifactId>framework-support-lock</artifactId>-->
-            <!--<version>1.2.1.RELEASE</version>-->
+        <!--<groupId>com.mhc.framework</groupId>-->
+        <!--<artifactId>framework-support-lock</artifactId>-->
+        <!--<version>1.2.1.RELEASE</version>-->
         <!--</dependency>-->
 
         <dependency>
@@ -249,8 +251,6 @@
             <artifactId>simple-starter</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
-
-
 
 
     </dependencies>

@@ -11,6 +11,10 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/temp?useUnicode=true&characterEncoding=utf-8&useAffectedRows=true
       username: root
       password: 123456
+      druid:
+        initial-size: 5
+        max-active: 20
+
   aop:
     proxy-target-class: true
 mybatis-plus:

@@ -52,7 +52,7 @@ public class EasyLock {
         final ReentrantLock reentrantLock=new ReentrantLock();
         final EasyLock easyLock=new EasyLock();
         Thread t1=new Thread(()->{
-            reentrantLock.lock();
+            easyLock.lock();
             try {
                 System.out.println("1获得了锁");
                 Thread.sleep(3000);
@@ -60,11 +60,11 @@ public class EasyLock {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            reentrantLock.unlock();
+            easyLock.unlock();
         });
 
         Thread t2=new Thread(()->{
-            reentrantLock.lock();
+            easyLock.lock();
             try {
                 System.out.println("2获得了锁");
                 Thread.sleep(3000);
@@ -72,7 +72,7 @@ public class EasyLock {
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            reentrantLock.unlock();
+            easyLock.unlock();
         });
         t1.start();
         t2.start();

@@ -46,7 +46,7 @@ public class TestServiceImpl implements TestService {
     public void lockCon() {
         zhUserDao.selectForUpdateById();
         try {
-            Thread.sleep(1000*100);
+            Thread.sleep(1000*10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
