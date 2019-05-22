@@ -1,9 +1,12 @@
 package com.lunzi.camry.proxy;
 
+import com.google.common.collect.Maps;
+
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Map;
 
 /**
  * Created by lunzi on 2019/5/10 3:45 PM
@@ -33,9 +36,11 @@ public class ProxyFactory implements InvocationHandler {
     }
 
     public static void main(String[] args) {
-        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
-        ProxyFactory proxyFactory = new ProxyFactory(new Man());
-        EchoService human = (EchoService) proxyFactory.getObject();
-        System.out.println(human.$echo("1232"));
+//        System.getProperties().put("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
+//        ProxyFactory proxyFactory = new ProxyFactory(new Man());
+//        EchoService human = (EchoService) proxyFactory.getObject();
+//        System.out.println(human.$echo("1232"));
+        Map<Long,String> map= Maps.newHashMap();
+        System.out.println(map.get(null));
     }
 }
