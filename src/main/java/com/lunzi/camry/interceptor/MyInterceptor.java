@@ -16,6 +16,9 @@ public class MyInterceptor implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         System.out.println("拦截器之前的操作");
+        System.out.println(request.getRequestURI());
+        System.out.println(request.getRequestURL());
+        System.out.println(request.getPathInfo());
         return true;
     }
 

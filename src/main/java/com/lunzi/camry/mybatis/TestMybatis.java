@@ -5,8 +5,10 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 /**
  * Created by lunzi on 2018/7/16 下午9:06
@@ -16,6 +18,9 @@ public class TestMybatis {
         InputStream inputStream= Resources.getResourceAsStream("");
         SqlSessionFactory sqlSessionFactory=new SqlSessionFactoryBuilder().build(inputStream);
         SqlSession sqlsession=sqlSessionFactory.openSession();
+        inputStream.read();
+
+
     }
 }
 

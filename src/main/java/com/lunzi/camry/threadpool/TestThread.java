@@ -25,27 +25,15 @@ public class TestThread {
     }
 
     public static void main(String[] args) throws InterruptedException {
-        CountDownLatch countDownLatch=new CountDownLatch(2);
-        TestThread thread=new TestThread();
-        Thread thread1=new Thread(new Runnable() {
-            @Override
-            public void run() {
-                thread.add();
-                countDownLatch.countDown();
-            }
-        });
-        Thread thread2=new Thread(new Runnable() {
-            @Override
-            public void run() {
-                thread.add();
-                countDownLatch.countDown();
-            }
-        });
-        thread1.start();
-        thread2.start();
-        countDownLatch.await();
-        System.out.println(thread.getCount());
-
+        for(int i=0;i<100;i++){
+            int finalI = i;
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.println(finalI);
+                }
+            }).start();
+        }
     }
 
 }

@@ -1,7 +1,6 @@
 package com.lunzi.camry.aspects;
 
 import com.lunzi.camry.service.TestService;
-import com.lunzi.camry.service.impl.TestServiceImpl;
 import org.apache.ibatis.io.ResolverUtil;
 
 import java.lang.reflect.InvocationHandler;

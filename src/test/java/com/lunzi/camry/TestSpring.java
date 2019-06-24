@@ -3,10 +3,12 @@ package com.lunzi.camry;
 import com.lunzi.camry.domain.Dic;
 import com.lunzi.camry.domain.Student;
 import com.lunzi.camry.domain.User;
+import com.lunzi.camry.service.TestService;
 import com.lunzi.camry.spring.SpringContextUtil;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
@@ -70,7 +72,8 @@ public class TestSpring {
     }
     @Test
     public void test5(){
-        User user=new User();
+      ListableBeanFactory listableBeanFactory=SpringContextUtil.getApplicationContext();
+      TestService testService= (TestService) listableBeanFactory.getBean("testService");
     }
 
 

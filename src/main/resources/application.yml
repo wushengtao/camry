@@ -66,8 +66,8 @@ demo:
 example:
   service:
     enabled: true
-zk:
-  url: localhost:2181
+#zk:
+#  url: localhost:2181
 
 
 

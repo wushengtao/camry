@@ -4,8 +4,6 @@ import com.lunzi.camry.annotation.BizResultAdvice;
 import com.lunzi.camry.mapper.ZhUserDao;
 import com.lunzi.camry.service.TestService;
 
-import com.lunzi.simple.starter.anno.DisLock;
-import com.lunzi.simple.starter.anno.ZkDisLock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 /**
  * Created by lunzi on 2018/6/10 下午6:52
  */
-@Component
+@Component("testService")
 public class TestServiceImpl implements TestService {
     @Autowired
     ZhUserDao zhUserDao;
@@ -30,7 +28,7 @@ public class TestServiceImpl implements TestService {
 
     @Override
     //@ZkDisLock(value = "test")
-    @DisLock(key= "redisLock",keepMills = 3000)
+//    @DisLock(key= "redisLock",keepMills = 3000)
     public String lock() {
         System.out.println("加锁,线程睡眠一会");
         try {

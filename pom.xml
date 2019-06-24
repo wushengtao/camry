@@ -234,6 +234,12 @@
             <version>1.2.54</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor_2.13</artifactId>
+            <version>2.5.23</version>
+        </dependency>
+
         <!--<dependency>-->
         <!--<groupId>com.mhc.framework</groupId>-->
         <!--<artifactId>framework-support-lock</artifactId>-->
@@ -246,11 +252,11 @@
             <version>2.13.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.lunzi</groupId>
-            <artifactId>simple-starter</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.lunzi</groupId>-->
+            <!--<artifactId>simple-starter</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
 
 
     </dependencies>
