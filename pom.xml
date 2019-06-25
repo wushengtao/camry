@@ -239,6 +239,11 @@
             <artifactId>akka-actor_2.13</artifactId>
             <version>2.5.23</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-starter</artifactId>
+            <version>1.4.0</version>
+        </dependency>
 
         <!--<dependency>-->
         <!--<groupId>com.mhc.framework</groupId>-->
