@@ -12,7 +12,7 @@ public class MonitorEvent extends EventObject {
      * @param source The object on which the Event initially occurred.
      * @throws IllegalArgumentException if source is null.
      */
-    public MonitorEvent(Object source) {
+    public  MonitorEvent(Object source) {
         super(source);
     }
 

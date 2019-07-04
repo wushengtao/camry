@@ -1,34 +1,15 @@
 package com.lunzi.camry.rpc;
 
-import ch.qos.logback.classic.spi.STEUtil;
-import com.lunzi.camry.domain.Student;
-
-import java.io.BufferedOutputStream;
-import java.io.IOException;
-import java.io.ObjectOutput;
-import java.io.ObjectOutputStream;
-import java.net.Socket;
-import java.nio.ByteBuffer;
+import java.lang.reflect.Proxy;
 
 /**
- * Created by lunzi on 2018/9/5 下午10:31
+ * Created by lunzi on 2019/6/26 9:07 AM
  */
 public class RpcClient {
-    public static int port=7777;
-    public static String address="127.0.0.1";
-    public static Student student=new Student();
-    public static void main(String args[]) throws Exception {
-        Long start=System.currentTimeMillis();
-        for(int i=0;i<3;i++){
-            Socket socket=new Socket(address,port);
-            student.setName("wst");
-            ObjectOutputStream objectOutputStream=new ObjectOutputStream(socket.getOutputStream());
-            objectOutputStream.writeObject(student);
-            socket.shutdownOutput();
-            objectOutputStream.flush();
-            objectOutputStream.close();
-        }
-        Long end=System.currentTimeMillis();
-        System.out.println(end-start);
+    public static void main(String[] args) {
+        //创建代理对象
+        RpcInterface rpcInterface = (RpcInterface) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
+                new Class[]{RpcInterface.class},new RpcProxyFactory());
+        rpcInterface.add(1, 2);
     }
 }

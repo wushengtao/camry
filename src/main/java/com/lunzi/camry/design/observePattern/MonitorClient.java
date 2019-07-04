@@ -1,6 +1,5 @@
 package com.lunzi.camry.design.observePattern;
 
-import javax.servlet.http.HttpSessionListener;
 
 /**
  * Created by lunzi on 2019/6/25 9:21 AM
